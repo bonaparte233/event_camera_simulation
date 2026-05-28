@@ -4,7 +4,7 @@ Companion repository for **Event-Camera Simulation: A Review**.
 
 This page collects papers and public resources related to event-camera simulation. The list follows the review's mechanism-based categories: physics- and rule-based simulators, learning-based event generation, and Evaluation and Sim-to-Real Analysis resources.
 
-Last updated: 2026-05-24.
+Last updated: 2026-05-28.
 
 ## Project Page
 
@@ -50,9 +50,12 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Kaiser et al.**, *Towards a Framework for End-to-End Control of a Simulated Vehicle with Spiking Neural Networks*, SIMPAR 2016. [[paper](https://doi.org/10.1109/SIMPAR.2016.7862386)]
 - **Palinauskas et al.**, *Generating Event-Based Datasets for Robotic Applications using MuJoCo-ESIM*, ICONS 2023. [[paper](https://doi.org/10.1145/3589737.3605984)] [[code](https://github.com/fortissNC/Mujoco-ESIM)]
 - **Tsuji et al.**, *Event-Based Camera Simulation Using Monte Carlo Path Tracing with Adaptive Denoising*, ICIP 2023. [[paper](https://doi.org/10.1109/ICIP49359.2023.10222771)] [[code](https://github.com/0V/ESIM-AD)]
+- **Li et al.**, *BlinkFlow: A Dataset to Push the Limits of Event-based Optical Flow Estimation*, IROS 2023. [[paper](https://arxiv.org/abs/2303.07716)] [[project](https://zju3dv.github.io/blinkflow/)] [[code](https://github.com/zju3dv/blink_sim)]
 - **Han et al.**, *Physical-Based Event Camera Simulator*, ECCV 2024. [[paper](https://doi.org/10.1007/978-3-031-72995-9_2)] [[code](https://github.com/lanpokn/PECS_trail_version)]
 - **Manabe et al.**, *Monte Carlo Path Tracing and Statistical Event Detection for Event Camera Simulation*, ICCP 2024. [[paper](https://doi.org/10.1109/ICCP61108.2024.10644728)] [[code](https://github.com/ichi-raven/MC-EBCS)]
 - **Reinold, Ghosh, and Gallego**, *Combined Physics and Event Camera Simulator for Slip Detection*, WACV Workshops 2025. [[paper](https://doi.org/10.1109/WACVW65960.2025.00104)] [[code](https://github.com/tub-rip/event_slip)]
+- **Rodriguez et al.**, *An Event Camera Simulator for Arbitrary Viewpoints Based on Neural Radiance Fields*, VISAPP 2025. [[paper](https://doi.org/10.5220/0013388400003912)]
+- **Li et al.**, *GS2E: Gaussian Splatting is an Effective Data Generator for Event Stream Generation*, arXiv 2025. [[paper](https://arxiv.org/abs/2505.15287)] [[project](https://intothemild.github.io/GS2E.github.io/)] [[code](https://github.com/PKU-YuanGroup/GS2E)]
 - **Li et al.**, *EventTracer: Fast Path Tracing-Based Event Stream Rendering*, arXiv 2025. [[paper](https://arxiv.org/abs/2508.18071)]
 - **Kyatham et al.**, *EREBUS: End-to-End Robust Event Based Underwater Simulation*, arXiv 2025. [[paper](https://arxiv.org/abs/2511.01381)]
 - **Middleton et al.**, *Modelling and Simulation of Neuromorphic Datasets for Anomaly Detection in Computer Vision*, arXiv 2026. [[paper](https://arxiv.org/abs/2602.23514)] [[code](https://github.com/EDGYOrganism/ANTShapes)]
@@ -72,15 +75,18 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Zhu et al.**, *EventGAN: Leveraging Large Scale Image Datasets for Event Cameras*, ICCP 2021. [[paper](https://doi.org/10.1109/ICCP51581.2021.9466265)] [[code](https://github.com/alexzzhu/EventGAN)]
 - **Zhang et al.**, *V2CE: Video to Continuous Events Simulator*, ICRA 2024. [[paper](https://doi.org/10.1109/ICRA57147.2024.10609864)] [[code](https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox)]
 - **Bhattacharya et al.**, *EvDNeRF: Reconstructing Event Data with Dynamic Neural Radiance Fields*, WACV 2024. [[paper](https://doi.org/10.1109/WACV57701.2024.00574)] [[project](https://www.anishbhattacharya.com/research/evdnerf)] [[code](https://github.com/anish-bhattacharya/EvDNeRF)]
+- **Masuda et al.**, *Neural Implicit Event Generator for Motion Tracking*, ICRA 2022. Learns an implicit event generator for a motion-tracking update loop; useful as a task-specific learned generator rather than a general event-camera simulator. [[paper](https://doi.org/10.1109/ICRA46639.2022.9812142)]
 
 ### Conditional Event Generation
 
 - **Gu et al.**, *Reliable Event Generation With Invertible Conditional Normalizing Flow*, IEEE TPAMI 2024. [[paper](https://doi.org/10.1109/TPAMI.2023.3326538)]
 - **Ott, Wang, and Liu**, *Text-to-Events: Synthetic Event Camera Streams from Conditional Text Input*, NICE 2024. [[paper](https://arxiv.org/abs/2406.03439)]
+- **Zhang et al.**, *An Event-Oriented Diffusion-Refinement Method for Sparse Events Completion*, Scientific Reports 2024. [[paper](https://doi.org/10.1038/s41598-024-57333-2)] [[arXiv](https://arxiv.org/abs/2401.03153)]
 - **Hu et al.**, *ControlEvents: Controllable Synthesis of Event Camera Data with Foundational Prior from Image Diffusion Models*, WACV 2026. [[paper](https://arxiv.org/abs/2509.22864)] [[project](https://yuxuan-xue.com/controlevents/)]
 
 ## **Evaluation and Sim-to-Real Analysis**
 
+- **Cannici et al.**, *N-ROD: A Neuromorphic Dataset for Synthetic-to-Real Domain Adaptation*, CVPR Workshops 2021. Provides a synthetic-to-real event-domain adaptation benchmark based on simulated and real RGB-D object data. [[paper](https://openaccess.thecvf.com/content/CVPR2021W/EventVision/papers/Cannici_N-ROD_A_Neuromorphic_Dataset_for_Synthetic-to-Real_Domain_Adaptation_CVPRW_2021_paper.pdf)] [[project](https://n-rod-dataset.github.io/home/)]
 - **Planamente et al.**, *DA4Event: Towards Bridging the Sim-to-Real Gap for Event Cameras Using Domain Adaptation*, IEEE RA-L 2021. [[paper](https://doi.org/10.1109/LRA.2021.3093870)] [[code](https://github.com/DA4EVENT/home)]
 - **Ziegler et al.**, *BiasBench: A Reproducible Benchmark for Tuning the Biases of Event Cameras*, CVPR Workshops 2025. [[paper](https://doi.org/10.1109/CVPRW67362.2025.00493)] [[project](https://cogsys-tuebingen.github.io/biasbench/)] [[code](https://github.com/cogsys-tuebingen/biasbench)]
 - **Chanda et al.**, *Event Quality Score (EQS): Assessing the Realism of Simulated Event Camera Streams via Distances in Latent Space*, CVPR Workshops 2025. [[paper](https://ieeexplore.ieee.org/document/11147485)] [[code](https://github.com/eventbasedvision/EQS)]
