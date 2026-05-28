@@ -73,18 +73,18 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Zhu et al.**, *EventGAN: Leveraging Large Scale Image Datasets for Event Cameras*, ICCP 2021. [[paper](https://doi.org/10.1109/ICCP51581.2021.9466265)] [[code](https://github.com/alexzzhu/EventGAN)]
 - **Zhang et al.**, *V2CE: Video to Continuous Events Simulator*, ICRA 2024. [[paper](https://doi.org/10.1109/ICRA57147.2024.10609864)] [[code](https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox)]
 - **Bhattacharya et al.**, *EvDNeRF: Reconstructing Event Data with Dynamic Neural Radiance Fields*, WACV 2024. [[paper](https://doi.org/10.1109/WACV57701.2024.00574)] [[project](https://www.anishbhattacharya.com/research/evdnerf)] [[code](https://github.com/anish-bhattacharya/EvDNeRF)]
-- **Masuda et al.**, *Neural Implicit Event Generator for Motion Tracking*, ICRA 2022. Learns an implicit event generator for a motion-tracking update loop; useful as a task-specific learned generator rather than a general event-camera simulator. [[paper](https://doi.org/10.1109/ICRA46639.2022.9812142)]
+- **Masuda et al.**, *Neural Implicit Event Generator for Motion Tracking*, ICRA 2022. [[paper](https://doi.org/10.1109/ICRA46639.2022.9812142)]
 
 ### Conditional Event Generation
 
 - **Gu et al.**, *Reliable Event Generation With Invertible Conditional Normalizing Flow*, IEEE TPAMI 2024. [[paper](https://doi.org/10.1109/TPAMI.2023.3326538)]
 - **Ott, Wang, and Liu**, *Text-to-Events: Synthetic Event Camera Streams from Conditional Text Input*, NICE 2024. [[paper](https://arxiv.org/abs/2406.03439)]
-- **Zhang et al.**, *An Event-Oriented Diffusion-Refinement Method for Sparse Events Completion*, Scientific Reports 2024. [[paper](https://doi.org/10.1038/s41598-024-57333-2)] [[arXiv](https://arxiv.org/abs/2401.03153)]
+- **Zhang et al.**, *An Event-Oriented Diffusion-Refinement Method for Sparse Events Completion*, Scientific Reports 2024. [[paper](https://doi.org/10.1038/s41598-024-57333-2)]
 - **Hu et al.**, *ControlEvents: Controllable Synthesis of Event Camera Data with Foundational Prior from Image Diffusion Models*, WACV 2026. [[paper](https://arxiv.org/abs/2509.22864)] [[project](https://yuxuan-xue.com/controlevents/)]
 
 ## **Evaluation and Sim-to-Real Analysis**
 
-- **Cannici et al.**, *N-ROD: A Neuromorphic Dataset for Synthetic-to-Real Domain Adaptation*, CVPR Workshops 2021. Provides a synthetic-to-real event-domain adaptation benchmark based on simulated and real RGB-D object data. [[paper](https://openaccess.thecvf.com/content/CVPR2021W/EventVision/papers/Cannici_N-ROD_A_Neuromorphic_Dataset_for_Synthetic-to-Real_Domain_Adaptation_CVPRW_2021_paper.pdf)] [[project](https://n-rod-dataset.github.io/home/)]
+- **Cannici et al.**, *N-ROD: A Neuromorphic Dataset for Synthetic-to-Real Domain Adaptation*, CVPR Workshops 2021. [[paper](https://openaccess.thecvf.com/content/CVPR2021W/EventVision/papers/Cannici_N-ROD_A_Neuromorphic_Dataset_for_Synthetic-to-Real_Domain_Adaptation_CVPRW_2021_paper.pdf)] [[project](https://n-rod-dataset.github.io/home/)]
 - **Planamente et al.**, *DA4Event: Towards Bridging the Sim-to-Real Gap for Event Cameras Using Domain Adaptation*, IEEE RA-L 2021. [[paper](https://doi.org/10.1109/LRA.2021.3093870)] [[code](https://github.com/DA4EVENT/home)]
 - **Ziegler et al.**, *BiasBench: A Reproducible Benchmark for Tuning the Biases of Event Cameras*, CVPR Workshops 2025. [[paper](https://doi.org/10.1109/CVPRW67362.2025.00493)] [[project](https://cogsys-tuebingen.github.io/biasbench/)] [[code](https://github.com/cogsys-tuebingen/biasbench)]
 - **Chanda et al.**, *Event Quality Score (EQS): Assessing the Realism of Simulated Event Camera Streams via Distances in Latent Space*, CVPR Workshops 2025. [[paper](https://ieeexplore.ieee.org/document/11147485)] [[code](https://github.com/eventbasedvision/EQS)]

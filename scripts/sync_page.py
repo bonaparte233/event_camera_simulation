@@ -153,7 +153,6 @@ def render_stats(entries: list[CatalogEntry]) -> str:
         ),
         (counts["Learning-Based Event Generation"], "learning-based resources"),
         (counts["Evaluation and Sim-to-Real Analysis"], "evaluation and benchmark resources"),
-        (len(CATEGORY_LABELS), "review categories"),
     ]
     lines: list[str] = []
     for number, label in items:
@@ -168,29 +167,82 @@ def render_stats(entries: list[CatalogEntry]) -> str:
     return indent_lines(lines, "          ")
 
 
-def render_catalog_rows(entries: list[CatalogEntry]) -> str:
+def entry_display_name(entry: CatalogEntry) -> str:
+    if entry.authors_or_name == entry.title:
+        return entry.title
+    return f"{entry.authors_or_name}, {entry.title}"
+
+
+def entry_metadata(entry: CatalogEntry) -> str:
+    values = []
+    if entry.venue:
+        values.append(entry.venue)
+    if entry.year and (not entry.venue or str(entry.year) not in entry.venue):
+        values.append(str(entry.year))
+    return " · ".join(values)
+
+
+def render_entry_lines(entries: list[CatalogEntry]) -> list[str]:
     lines: list[str] = []
     for entry in entries:
-        category_label = CATEGORY_LABELS[entry.category]
-        route_parts = [html.escape(category_label)]
-        if entry.subcategory:
-            route_parts.append(html.escape(entry.subcategory))
-        route = "<br>".join(route_parts)
-        title = html.escape(entry.title)
-        secondary = ""
-        if entry.authors_or_name and entry.authors_or_name != entry.title:
-            secondary = f"<br>{html.escape(entry.authors_or_name)}"
-        year = f"<br>{entry.year}" if entry.year else ""
+        metadata = entry_metadata(entry)
+        meta_html = f'<p class="catalog-entry-meta">{html.escape(metadata)}</p>' if metadata else ""
         lines.extend(
             [
-                "<tr>",
-                f"  <td><strong>{title}</strong>{secondary}{year}</td>",
-                f"  <td>{route}</td>",
-                f"  <td>{html.escape(entry.venue)}</td>",
-                f"  <td>{render_links(entry.links)}</td>",
-                "</tr>",
+                '<li class="catalog-entry">',
+                '  <div class="catalog-entry-main">',
+                f'    <p class="catalog-entry-title">{html.escape(entry_display_name(entry))}</p>',
+                f"    {meta_html}",
+                "  </div>",
+                f'  <div class="catalog-entry-links">{render_links(entry.links)}</div>',
+                "</li>",
             ]
         )
+    return lines
+
+
+def render_catalog_list(entries: list[CatalogEntry]) -> str:
+    lines: list[str] = []
+    for category in CATEGORY_LABELS:
+        category_entries = [entry for entry in entries if entry.category == category]
+        if not category_entries:
+            continue
+        lines.extend(
+            [
+                '<section class="catalog-group">',
+                '  <div class="catalog-group-header">',
+                f"    <h3>{html.escape(category)}</h3>",
+                f"    <span>{len(category_entries)} resources</span>",
+                "  </div>",
+            ]
+        )
+        subcategories = []
+        for entry in category_entries:
+            label = entry.subcategory or "Resources"
+            if label not in subcategories:
+                subcategories.append(label)
+
+        if subcategories == ["Resources"]:
+            lines.append('<ul class="catalog-resource-list">')
+            lines.extend(render_entry_lines(category_entries))
+            lines.append("</ul>")
+            lines.append("</section>")
+            continue
+
+        for subcategory in subcategories:
+            subcategory_entries = [
+                entry for entry in category_entries if (entry.subcategory or "Resources") == subcategory
+            ]
+            lines.extend(
+                [
+                    '<section class="catalog-route">',
+                    f"  <h4>{html.escape(subcategory)}</h4>",
+                    '  <ul class="catalog-resource-list">',
+                ]
+            )
+            lines.extend(render_entry_lines(subcategory_entries))
+            lines.extend(["  </ul>", "</section>"])
+        lines.append("</section>")
     return indent_lines(lines, "              ")
 
 
@@ -220,7 +272,7 @@ def sync_index(readme_path: Path = README_PATH, index_path: Path = INDEX_PATH) -
 
     index_text = replace_generated_block(index_text, "catalog-meta", render_hero_meta(entries))
     index_text = replace_generated_block(index_text, "catalog-stats", render_stats(entries))
-    index_text = replace_generated_block(index_text, "catalog-table", render_catalog_rows(entries))
+    index_text = replace_generated_block(index_text, "catalog-list", render_catalog_list(entries))
     return index_text
 
 
