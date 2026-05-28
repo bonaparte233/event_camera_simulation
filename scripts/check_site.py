@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-from sync_page import INDEX_PATH, README_PATH, count_public_code_links, parse_readme, sync_index
+from sync_page import INDEX_PATH, README_PATH, count_public_github_links, parse_readme, sync_index
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,9 +40,9 @@ def main() -> int:
     if len(entries) < 40:
         return fail(f"expected at least 40 README resource entries, found {len(entries)}")
 
-    code_link_count = count_public_code_links(entries)
-    if code_link_count < 25:
-        return fail(f"expected at least 25 public GitHub links, found {code_link_count}")
+    github_link_count = count_public_github_links(entries)
+    if github_link_count < 25:
+        return fail(f"expected at least 25 public GitHub links, found {github_link_count}")
 
     csv_files = sorted((ROOT / "data").glob("*.csv"))
     if csv_files:
@@ -70,7 +70,7 @@ def main() -> int:
 
     print(
         "site check passed: "
-        f"{len(entries)} README entries, {code_link_count} public GitHub links, "
+        f"{len(entries)} README entries, {github_link_count} public GitHub links, "
         f"{len(list((ROOT / 'assets' / 'figures').glob('*.svg')))} figure assets"
     )
     return 0

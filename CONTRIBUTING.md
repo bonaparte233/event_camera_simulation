@@ -19,19 +19,19 @@ Do not describe a general-purpose platform as an event-camera simulator unless t
 
 ## README Entry Format
 
-Only correctly formatted README entries are included in the generated project page. Use one bullet under the right category. Link labels are not fixed; use clear labels for the resources that actually exist.
+Only correctly formatted README entries are included in the generated project page. Use one bullet under the right category. Links should use the `[[label](url)]` style, but link labels are not fixed; add as many resource links as are useful and publicly accessible.
 
 ```markdown
-- **Authors**, *Paper or resource title*, Venue or status Year. [[paper](https://...)] [[project](https://...)] [[code](https://github.com/...)]
+- **Authors**, *Paper or resource title*, Venue or status Year. [[paper](https://...)] [[project](https://...)] [[code](https://github.com/...)] [[supplement](https://...)]
 ```
 
 For platform resources without a paper title, a shorter entry is fine:
 
 ```markdown
-- **Platform or resource name**. [documentation](https://...) [repository](https://github.com/...)
+- **Platform or resource name**. [[documentation](https://...)] [[repository](https://github.com/...)] [[demo](https://...)]
 ```
 
-The links above are examples, not required labels. The scripts accept ordinary Markdown links and the bracketed style already used in the README.
+The link labels above are examples, not required types. The script parses any number of `[[label](url)]` links and displays the labels as written.
 
 After editing the README locally, run:
 
