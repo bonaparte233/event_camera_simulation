@@ -130,7 +130,7 @@ def render_links(links: tuple[tuple[str, str], ...]) -> str:
     for label, url in links:
         label_text = "arXiv" if label.lower() == "arxiv" else label
         rendered.append(f'<a href="{html.escape(url, quote=True)}">{html.escape(label_text)}</a>')
-    return " &middot; ".join(rendered)
+    return "".join(rendered)
 
 
 def render_hero_meta(entries: list[CatalogEntry]) -> str:
@@ -182,6 +182,15 @@ def entry_metadata(entry: CatalogEntry) -> str:
     return " · ".join(values)
 
 
+def category_class(category: str) -> str:
+    classes = {
+        "Physics- and Rule-Based Event-Camera Simulators": "category-physics",
+        "Learning-Based Event Generation": "category-learning",
+        "Evaluation and Sim-to-Real Analysis": "category-evaluation",
+    }
+    return classes[category]
+
+
 def render_entry_lines(entries: list[CatalogEntry]) -> list[str]:
     lines: list[str] = []
     for entry in entries:
@@ -209,7 +218,7 @@ def render_catalog_list(entries: list[CatalogEntry]) -> str:
             continue
         lines.extend(
             [
-                '<section class="catalog-group">',
+                f'<section class="catalog-group {category_class(category)}">',
                 '  <div class="catalog-group-header">',
                 f"    <h3>{html.escape(category)}</h3>",
                 f"    <span>{len(category_entries)} resources</span>",
