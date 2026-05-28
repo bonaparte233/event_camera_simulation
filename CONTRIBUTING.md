@@ -17,6 +17,29 @@ Do not upload or redistribute publisher PDFs, copied tables from papers, or thir
 
 Do not describe a general-purpose platform as an event-camera simulator unless the entry clearly identifies the DVS-style interface or plugin.
 
+## README Entry Format
+
+Only correctly formatted README entries are included in the generated project page. Use one bullet under the right category:
+
+```markdown
+- **Authors**, *Paper or resource title*, Venue or status Year. [[paper](https://...)] [[project](https://...)] [[code](https://github.com/...)]
+```
+
+For platform resources without a paper title, use:
+
+```markdown
+- **Platform or resource name**. [[docs](https://...)] [[code](https://github.com/...)]
+```
+
+After editing the README locally, run:
+
+```bash
+python scripts/sync_page.py
+python scripts/check_site.py
+```
+
+The GitHub workflow checks pull requests and synchronizes generated page blocks after direct updates to `main`.
+
 ## Category Labels
 
 Choose one category path from the hierarchy below. The categories follow the review's mechanism-based framing: methods are grouped by how events are generated, not by the downstream task they support.
