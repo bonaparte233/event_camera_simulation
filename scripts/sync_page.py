@@ -23,7 +23,9 @@ CATEGORY_LABELS = {
     "Evaluation and Sim-to-Real Analysis": "Evaluation",
 }
 
-LINK_RE = re.compile(r"\[\[([^\]]+)\]\((https?://[^)]+)\)\]")
+# Accept both the bracketed style used in the current README, such as
+# [[paper](https://...)], and ordinary Markdown links, such as [paper](https://...).
+LINK_RE = re.compile(r"\[{1,2}([^\]]+)\]\((https?://[^)]+)\)\]?")
 ENTRY_RE = re.compile(r"^- \*\*(?P<head>.+?)\*\*(?P<body>.*)$")
 YEAR_RE = re.compile(r"\b(20\d{2})\b")
 
@@ -87,7 +89,7 @@ def parse_readme(readme_text: str) -> list[CatalogEntry]:
         body = match.group("body").strip()
         links = tuple((label.strip(), url.strip()) for label, url in LINK_RE.findall(body))
         if not links:
-            raise ValueError(f"README line {line_number} has no recognized [[label](url)] links")
+            raise ValueError(f"README line {line_number} has no recognized Markdown links")
 
         body_without_links = LINK_RE.sub("", body).strip()
         italic_match = re.search(r"\*(.+?)\*", body_without_links)
@@ -119,7 +121,7 @@ def count_public_code_links(entries: list[CatalogEntry]) -> int:
         1
         for entry in entries
         for label, url in entry.links
-        if label.lower() == "code" and "github.com/" in url.lower()
+        if "github.com/" in url.lower()
     )
 
 
@@ -136,7 +138,7 @@ def render_hero_meta(entries: list[CatalogEntry]) -> str:
     coverage = f"Coverage through {latest_year}" if latest_year else "Coverage maintained in README"
     lines = [
         f'<span class="pill">{len(entries)} indexed resources</span>',
-        f'<span class="pill">{count_public_code_links(entries)} public code links</span>',
+        f'<span class="pill">{count_public_code_links(entries)} public GitHub links</span>',
         f'<span class="pill">{html.escape(coverage)}</span>',
     ]
     return indent_lines(lines, "          ")

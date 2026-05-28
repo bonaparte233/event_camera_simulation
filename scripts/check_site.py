@@ -42,7 +42,7 @@ def main() -> int:
 
     code_link_count = count_public_code_links(entries)
     if code_link_count < 25:
-        return fail(f"expected at least 25 public GitHub code links, found {code_link_count}")
+        return fail(f"expected at least 25 public GitHub links, found {code_link_count}")
 
     csv_files = sorted((ROOT / "data").glob("*.csv"))
     if csv_files:
@@ -70,7 +70,7 @@ def main() -> int:
 
     print(
         "site check passed: "
-        f"{len(entries)} README entries, {code_link_count} public code links, "
+        f"{len(entries)} README entries, {code_link_count} public GitHub links, "
         f"{len(list((ROOT / 'assets' / 'figures').glob('*.svg')))} figure assets"
     )
     return 0
