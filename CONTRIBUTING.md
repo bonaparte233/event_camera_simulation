@@ -19,7 +19,7 @@ Do not describe a general-purpose platform as an event-camera simulator unless t
 
 ## README Entry Format
 
-Only correctly formatted README entries are included in the generated project page. Use one bullet under the right category. Links should use the `[[label](url)]` style, but link labels are not fixed; add as many resource links as are useful and publicly accessible.
+Only correctly formatted README entries are included in the project page. Use one bullet under the right category. Links should use the `[[label](url)]` style, but link labels are not fixed; add as many resource links as are useful and publicly accessible.
 
 ```markdown
 - **Authors**, *Paper or resource title*, Venue or status Year. [[paper](https://...)] [[project](https://...)] [[code](https://github.com/...)] [[supplement](https://...)]
