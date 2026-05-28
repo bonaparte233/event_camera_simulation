@@ -8,18 +8,7 @@ Last updated: 2026-05-29.
 
 ## Project Page
 
-This repository includes a static companion page in [`index.html`](index.html). It is intended for GitHub Pages and points readers to the paper record, the resource catalog, BibTeX data, and contribution guidelines.
-
 Public site: <https://bonaparte233.github.io/event_camera_simulation/>
-
-Generated sections of `index.html` are synchronized from this README. After editing the catalog, run:
-
-```bash
-python scripts/sync_page.py
-python scripts/check_site.py
-```
-
-GitHub Actions runs the same validation for pull requests. Direct updates to `main` can automatically commit the regenerated `index.html` if the README entries are correctly formatted.
 
 ## Review Paper
 
