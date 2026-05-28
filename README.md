@@ -6,6 +6,12 @@ This page collects papers and public resources related to event-camera simulatio
 
 Last updated: 2026-05-24.
 
+## Project Page
+
+This repository includes a static companion page in [`index.html`](index.html). It is intended for GitHub Pages and points readers to the paper record, the resource catalog, BibTeX data, and contribution guidelines.
+
+Public site: <https://bonaparte233.github.io/event_camera_simulation/>
+
 ## Review Paper
 
 **Event-Camera Simulation: A Review**

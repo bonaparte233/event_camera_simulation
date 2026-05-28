@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Companion page for Event-Camera Simulation: A Review.">
+    <title>Event-Camera Simulation: A Review</title>
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="#">Event-Camera Simulation</a>
+      <div class="nav-links">
+        <a href="#claims">Claims</a>
+        <a href="#categories">Categories</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Companion page to the review</p>
+        <h1>Event-Camera Simulation: A Review</h1>
+        <p class="lede">
+          A reader-facing entry point for a review of event-camera simulation, covering physics- and rule-based simulators,
+          learning-based event generation, and evaluation evidence for simulator realism.
+        </p>
+        <div class="actions" aria-label="Project links">
+          <a class="button primary" href="README.md">Resource Catalog</a>
+          <a class="button" href="CONTRIBUTING.md">Contribution Guide</a>
+          <a class="button" href="data/event_camera_simulation_references.bib">BibTeX Data</a>
+          <span class="button pending" title="The public paper record will be linked here when available.">Paper Record Coming Soon</span>
+        </div>
+        <div class="hero-meta" aria-label="Current repository snapshot">
+          <span class="pill">43 indexed resources</span>
+          <span class="pill">27 public code links</span>
+          <span class="pill">Coverage through April 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="claims">
+        <div class="section-header">
+          <h2>What The Review Contributes</h2>
+          <p>
+            The paper treats event-camera simulation as a separate research topic, not only as a preprocessing step for
+            downstream event-vision tasks.
+          </p>
+        </div>
+        <div class="claim-grid">
+          <article class="item accent-green">
+            <h3>Simulator Design</h3>
+            <p>It compares event-generation pipelines by their sensing assumptions, input modality, output form, and modeled non-idealities.</p>
+          </article>
+          <article class="item accent-red">
+            <h3>Mechanism-Based Categories</h3>
+            <p>It organizes work into physics- and rule-based simulation and learning-based event generation, with route-level distinctions.</p>
+          </article>
+          <article class="item accent-gold">
+            <h3>Evaluation Evidence</h3>
+            <p>It reads realism by claim type: signal fidelity, sensor calibration, scene realism, sim-to-real transfer, and task utility.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="categories">
+        <div class="section-header">
+          <h2>Category Structure</h2>
+          <p>
+            The categories follow how synthetic events are produced. Evaluation and benchmarking are treated as cross-route
+            evidence rather than a single score.
+          </p>
+        </div>
+        <div class="route-grid">
+          <article class="item accent-green">
+            <h3>Physics- and Rule-Based Simulation</h3>
+            <p>
+              Threshold-based, sensor-level, and scene-level routes preserve an explicit event-formation chain, so their
+              assumptions can be inspected and calibrated.
+            </p>
+          </article>
+          <article class="item accent-red">
+            <h3>Learning-Based Event Generation</h3>
+            <p>
+              Direct and conditional generators learn event streams or event representations from images, videos, prompts,
+              parameters, or control signals.
+            </p>
+          </article>
+        </div>
+        <div class="figure-band">
+          <img src="assets/figures/simulation_framework.svg" alt="Simulator categories used for comparison in the review.">
+          <p class="caption">Figure converted from the manuscript source. It mirrors the paper's category language so the public page and review stay aligned.</p>
+        </div>
+      </section>
+
+      <section class="section" id="catalog">
+        <div class="section-header">
+          <h2>Living Resource Catalog</h2>
+          <p>
+            The GitHub repository keeps the public-facing resource catalog separate from the paper PDF. The README is the
+            maintained catalog; contribution guidelines and BibTeX entries are maintained alongside it.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <article class="item">
+            <span class="number">33</span>
+            <p>physics- and rule-based resources</p>
+          </article>
+          <article class="item">
+            <span class="number">6</span>
+            <p>learning-based resources</p>
+          </article>
+          <article class="item">
+            <span class="number">4</span>
+            <p>evaluation and benchmark resources</p>
+          </article>
+          <article class="item">
+            <span class="number">3</span>
+            <p>review categories</p>
+          </article>
+        </div>
+        <div class="method-table-wrap" aria-live="polite">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Route</th>
+                <th>Mechanism</th>
+                <th>Evidence</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody id="method-table-body">
+              <tr>
+                <td><strong>ESIM</strong><br>2018</td>
+                <td>Physics- &amp; rule-based<br>Threshold-based</td>
+                <td>adaptive frame sampling</td>
+                <td>real and simulated examples</td>
+                <td><a href="https://arxiv.org/abs/1807.08379">paper</a> &middot; <a href="https://github.com/uzh-rpg/rpg_esim">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>v2e</strong><br>2021</td>
+                <td>Physics- &amp; rule-based<br>Sensor-level</td>
+                <td>video-to-DVS conversion with sensor effects</td>
+                <td>realistic DVS event generation from video</td>
+                <td><a href="https://doi.org/10.1109/CVPRW53098.2021.00144">paper</a> &middot; <a href="https://github.com/SensorsINI/v2e">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>DVS-Voltmeter</strong><br>2022</td>
+                <td>Physics- &amp; rule-based<br>Sensor-level</td>
+                <td>stochastic process-based event simulation</td>
+                <td>voltage-domain sensor modeling</td>
+                <td><a href="https://doi.org/10.1007/978-3-031-20071-7_34">paper</a> &middot; <a href="https://github.com/Lynn0306/DVS-Voltmeter">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>PECS</strong><br>2024</td>
+                <td>Physics- &amp; rule-based<br>Scene-level</td>
+                <td>physical event-camera simulation</td>
+                <td>scene and optics-aware generation</td>
+                <td><a href="https://doi.org/10.1007/978-3-031-72995-9_2">paper</a> &middot; <a href="https://github.com/lanpokn/PECS_trail_version">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>EventGAN</strong><br>2021</td>
+                <td>Learning-based<br>Direct generation</td>
+                <td>adversarial image-to-event translation</td>
+                <td>large-scale image-dataset leverage</td>
+                <td><a href="https://doi.org/10.1109/ICCP51581.2021.9466265">paper</a> &middot; <a href="https://github.com/alexzzhu/EventGAN">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>V2CE</strong><br>2024</td>
+                <td>Learning-based<br>Direct generation</td>
+                <td>video-to-continuous-events modeling</td>
+                <td>continuous event synthesis from video</td>
+                <td><a href="https://doi.org/10.1109/ICRA57147.2024.10609864">paper</a> &middot; <a href="https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>BiasBench</strong><br>2025</td>
+                <td>Evaluation<br>Bias tuning benchmark</td>
+                <td>reproducible bias-tuning evaluation</td>
+                <td>benchmark evidence for simulator limits</td>
+                <td><a href="https://doi.org/10.1109/CVPRW67362.2025.00493">paper</a> &middot; <a href="https://github.com/cogsys-tuebingen/biasbench">code</a></td>
+              </tr>
+              <tr>
+                <td><strong>EQS</strong><br>2025</td>
+                <td>Evaluation<br>Realism score</td>
+                <td>latent-space event quality assessment</td>
+                <td>realism comparison for simulated streams</td>
+                <td><a href="https://ieeexplore.ieee.org/document/11147485">paper</a> &middot; <a href="https://github.com/eventbasedvision/EQS">code</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Representative rows are selected from the <a href="README.md">README catalog</a>.</p>
+      </section>
+
+      <section class="section alt">
+        <div class="section-header">
+          <h2>Evaluation Is Claim-Dependent</h2>
+          <p>
+            The page highlights the review's core caution: event-count accuracy, timestamp fidelity, parameter calibration,
+            scene realism, and downstream gains support different claims.
+          </p>
+        </div>
+        <div class="figure-band">
+          <img src="assets/figures/realism.svg" alt="Layered view of event-camera simulator realism evidence.">
+          <p class="caption">The companion page keeps the realism framing visible because this is the practical part readers need when selecting a simulator.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Repository Contents</h2>
+          <p>
+            The repository is designed as a companion resource for the review, with a curated catalog, contribution
+            guidance, and reference metadata.
+          </p>
+        </div>
+        <div class="resource-grid">
+          <article class="item accent-green">
+            <h3>Resource Catalog</h3>
+            <p><a href="README.md">Read the curated public list</a> grouped by the review's simulator categories.</p>
+          </article>
+          <article class="item accent-red">
+            <h3>Category Structure</h3>
+            <p><a href="README.md#physics--and-rule-based-event-camera-simulators">Use the README categories</a> to browse simulator routes and modeling assumptions.</p>
+          </article>
+          <article class="item accent-gold">
+            <h3>BibTeX Data</h3>
+            <p><a href="data/event_camera_simulation_references.bib">Use the reference file</a> for citation metadata maintained with the catalog.</p>
+          </article>
+          <article class="item accent-blue">
+            <h3>Contribution Rules</h3>
+            <p><a href="CONTRIBUTING.md">Add entries conservatively</a> with paper metadata, public links, and category evidence.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="citation">
+        <div class="section-header">
+          <h2>Citation</h2>
+          <p>
+            The review citation will be updated after a public OpenReview page, arXiv entry, or publisher record is available.
+            Until then, cite the individual papers in the catalog.
+          </p>
+        </div>
+        <div class="citation-box">
+<pre>@misc{event_camera_simulation_review,
+  title = {Event-Camera Simulation: A Review},
+  note = {Citation metadata will be updated after public release},
+  year = {2026}
+}</pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Companion page for Event-Camera Simulation: A Review.</span>
+        <span>OpenReview and arXiv links should be added only after public records exist.</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
