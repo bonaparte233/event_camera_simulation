@@ -71,9 +71,9 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 ### Direct Event Generation
 
 - **Zhu et al.**, *EventGAN: Leveraging Large Scale Image Datasets for Event Cameras*, ICCP 2021. [[paper](https://doi.org/10.1109/ICCP51581.2021.9466265)] [[code](https://github.com/alexzzhu/EventGAN)]
+- **Masuda et al.**, *Neural Implicit Event Generator for Motion Tracking*, ICRA 2022. [[paper](https://doi.org/10.1109/ICRA46639.2022.9812142)]
 - **Zhang et al.**, *V2CE: Video to Continuous Events Simulator*, ICRA 2024. [[paper](https://doi.org/10.1109/ICRA57147.2024.10609864)] [[code](https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox)]
 - **Bhattacharya et al.**, *EvDNeRF: Reconstructing Event Data with Dynamic Neural Radiance Fields*, WACV 2024. [[paper](https://doi.org/10.1109/WACV57701.2024.00574)] [[project](https://www.anishbhattacharya.com/research/evdnerf)] [[code](https://github.com/anish-bhattacharya/EvDNeRF)]
-- **Masuda et al.**, *Neural Implicit Event Generator for Motion Tracking*, ICRA 2022. [[paper](https://doi.org/10.1109/ICRA46639.2022.9812142)]
 
 ### Conditional Event Generation
 
