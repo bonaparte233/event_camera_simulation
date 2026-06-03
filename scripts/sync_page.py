@@ -23,6 +23,40 @@ CATEGORY_LABELS = {
     "Evaluation and Sim-to-Real Analysis": "Evaluation",
 }
 
+PAGE_REQUIRED_SUBSTRINGS = {
+    "paper button": 'class="button primary paper-link"',
+    "OpenReview button": 'class="button openreview-link"',
+    "GitHub button": 'class="button github-link"',
+    "GitHub repository link": 'href="https://github.com/bonaparte233/event_camera_simulation"',
+    "BibTeX button": 'class="button bibtex-link"',
+    "BibTeX anchor": 'href="#citation"',
+    "overview figure": 'assets/figures/overview.svg',
+    "category figure": 'assets/figures/simulation_framework.svg',
+    "realism figure": 'assets/figures/realism.svg',
+    "copy button target": 'data-copy-target="bibtex-entry"',
+    "BibTeX entry": 'id="bibtex-entry"',
+    "citation key": "chen2026eventsim",
+    "copy script": "navigator.clipboard.writeText",
+    "footer GitHub note": "The catalog is maintained in the",
+}
+
+PAGE_REQUIRED_PATTERNS = {
+    "paper PDF link": r'href="https://openreview\.net/pdf\?id=[^"]*"',
+    "OpenReview forum link": r'href="https://openreview\.net/forum\?id=[^"]*"',
+}
+
+PAGE_FORBIDDEN_SUBSTRINGS = {
+    "old Resource Catalog button": ">Resource Catalog<",
+    "old Contribution Guide button": ">Contribution Guide<",
+    "old BibTeX Data button": ">BibTeX Data<",
+    "old paper placeholder button": "Paper Record Coming Soon",
+    "old repository contents section": "Repository Contents",
+    "public paper-list BibTeX link": "event_camera_simulation_references.bib",
+    "disabled hero link": 'aria-disabled="true"',
+    "removed hero lede": 'class="lede"',
+    "legacy table script": "assets/site.js",
+}
+
 # Catalog links use the bracketed resource style: [[label](https://...)].
 # Labels are display text only and are not restricted to paper/project/code.
 LINK_RE = re.compile(r"\[\[([^\]]+)\]\((https?://[^)]+)\)\]")
@@ -129,7 +163,10 @@ def render_links(links: tuple[tuple[str, str], ...]) -> str:
     rendered = []
     for label, url in links:
         label_text = "arXiv" if label.lower() == "arxiv" else label
-        rendered.append(f'<a href="{html.escape(url, quote=True)}">{html.escape(label_text)}</a>')
+        rendered.append(
+            f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">'
+            f"{html.escape(label_text)}</a>"
+        )
     return "".join(rendered)
 
 
@@ -168,13 +205,13 @@ def render_stats(entries: list[CatalogEntry]) -> str:
 
 
 def entry_display_name(entry: CatalogEntry) -> str:
-    if entry.authors_or_name == entry.title:
-        return entry.title
-    return f"{entry.authors_or_name}, {entry.title}"
+    return entry.title
 
 
 def entry_metadata(entry: CatalogEntry) -> str:
     values = []
+    if entry.authors_or_name and entry.authors_or_name != entry.title:
+        values.append(entry.authors_or_name)
     if entry.venue:
         values.append(entry.venue)
     if entry.year and (not entry.venue or str(entry.year) not in entry.venue):
@@ -272,9 +309,35 @@ def replace_generated_block(text: str, name: str, generated: str) -> str:
     return pattern.sub(f"{match.group('before')}\n{generated}{match.group('after')}", text, count=1)
 
 
+def validate_page_contract(index_text: str) -> None:
+    missing = [
+        description
+        for description, needle in PAGE_REQUIRED_SUBSTRINGS.items()
+        if needle not in index_text
+    ]
+    missing.extend(
+        description
+        for description, pattern in PAGE_REQUIRED_PATTERNS.items()
+        if not re.search(pattern, index_text)
+    )
+    forbidden = [
+        description
+        for description, needle in PAGE_FORBIDDEN_SUBSTRINGS.items()
+        if needle in index_text
+    ]
+    if missing or forbidden:
+        problems = []
+        if missing:
+            problems.append("missing " + ", ".join(missing))
+        if forbidden:
+            problems.append("found " + ", ".join(forbidden))
+        raise ValueError("Page contract failed: " + "; ".join(problems))
+
+
 def sync_index(readme_path: Path = README_PATH, index_path: Path = INDEX_PATH) -> str:
     readme_text = readme_path.read_text(encoding="utf-8")
     index_text = index_path.read_text(encoding="utf-8")
+    validate_page_contract(index_text)
     entries = parse_readme(readme_text)
     if not entries:
         raise ValueError("No README catalog entries were parsed")
@@ -282,6 +345,7 @@ def sync_index(readme_path: Path = README_PATH, index_path: Path = INDEX_PATH) -
     index_text = replace_generated_block(index_text, "catalog-meta", render_hero_meta(entries))
     index_text = replace_generated_block(index_text, "catalog-stats", render_stats(entries))
     index_text = replace_generated_block(index_text, "catalog-list", render_catalog_list(entries))
+    validate_page_contract(index_text)
     return index_text
 
 

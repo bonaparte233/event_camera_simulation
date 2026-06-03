@@ -6,15 +6,11 @@ This page collects papers and public resources related to event-camera simulatio
 
 Last updated: 2026-06-03.
 
-## Project Page
-
-Public site: <https://bonaparte233.github.io/event_camera_simulation/>
-
 ## Review Paper
 
 **Event-Camera Simulation: A Review**
 
-The paper link and BibTeX entry for the review will be added after the preprint or published version is public.
+Project page: <https://bonaparte233.github.io/event_camera_simulation/>
 
 ## Physics- and Rule-Based Event-Camera Simulation
 
@@ -30,7 +26,7 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Ziegler et al.**, *Real-time Event Simulation with Frame-Based Cameras*, ICRA 2023. [[paper](https://arxiv.org/abs/2209.04634)] [[project](https://cogsys-tuebingen.github.io/realtime_event_simulator/)] [[code](https://github.com/cogsys-tuebingen/event_simulator)]
 - **Ma et al.**, *I2E: Real-Time Image-to-Event Conversion for High-Performance Spiking Neural Networks*, AAAI 2026. [[paper](https://doi.org/10.1609/aaai.v40i3.37179)] [[code](https://github.com/Ruichen0424/I2E)]
 
-### Sensor-Level Simulation
+### Sensor-Aware Simulation
 
 - **Stoffregen et al.**, *Reducing the Sim-to-Real Gap for Event Cameras*, ECCV 2020. [[paper](https://doi.org/10.1007/978-3-030-58583-9_32)] [[project](https://timostoff.github.io/20ecnn)] [[code](https://github.com/TimoStoff/event_cnn_minimal)]
 - **Joubert et al.**, *Event Camera Simulator Improvements via Characterized Parameters*, Frontiers in Neuroscience 2021. [[paper](https://doi.org/10.3389/fnins.2021.702765)]
@@ -100,4 +96,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format and category labels.
 
 ## Citation
 
-The citation for **Event-Camera Simulation: A Review** will be added when the paper becomes public. If you use this repository before then, please cite the individual papers listed above.
+```bibtex
+@misc{chen2026eventsim,
+  title={Event-Camera Simulation: A Review},
+  author={Langyi, Chen and Chuanzhi, Xu and Haoxian, Zhou and Haodong, Chen and Qiang, Qu and Weidong, Cai},
+  url={https://openreview.net/pdf?id=gal0rSykxm},
+  year={2026}
+}
+```

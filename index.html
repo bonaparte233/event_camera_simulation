@@ -1,112 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Companion page for Event-Camera Simulation: A Review.">
-    <title>Event-Camera Simulation: A Review</title>
-    <link rel="stylesheet" href="assets/site.css">
-  </head>
-  <body>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="brand" href="#">Event-Camera Simulation</a>
-      <div class="nav-links">
-        <a href="#claims">Claims</a>
-        <a href="#categories">Categories</a>
-        <a href="#catalog">Catalog</a>
-        <a href="#citation">Citation</a>
-      </div>
-    </nav>
 
-    <header class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Companion page to the review</p>
-        <h1>Event-Camera Simulation: A Review</h1>
-        <p class="lede">
-          A companion entry point for a review of event-camera simulation, covering physics- and rule-based simulation,
-          learning-based event generation, and evaluation evidence for simulator realism.
-        </p>
-        <div class="actions" aria-label="Project links">
-          <a class="button primary" href="README.md">Resource Catalog</a>
-          <a class="button" href="CONTRIBUTING.md">Contribution Guide</a>
-          <a class="button" href="data/event_camera_simulation_references.bib">BibTeX Data</a>
-          <span class="button pending" title="Paper link will be added when available.">Paper Record Coming Soon</span>
-        </div>
-        <div class="hero-meta" aria-label="Current repository snapshot">
-          <!-- catalog-meta:start -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Companion page for Event-Camera Simulation: A Review.">
+  <title>Event-Camera Simulation: A Review</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#">Event-Camera Simulation</a>
+    <div class="nav-links">
+      <a href="#claims">Claims</a>
+      <a href="#categories">Categories</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#citation">Citation</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Companion page to the review</p>
+      <h1>Event-Camera Simulation: A Review</h1>
+      <div class="actions" aria-label="Project links">
+        <a class="button primary paper-link" href="https://openreview.net/pdf?id=gal0rSykxm" target="_blank"
+          rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+            <path d="M14 2v6h6"></path>
+            <path d="M8 13h8"></path>
+            <path d="M8 17h5"></path>
+          </svg>
+          <span>Paper</span>
+        </a>
+        <a class="button openreview-link" href="https://openreview.net/forum?id=gal0rSykxm" target="_blank"
+          rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M3 6h18"></path>
+            <path d="M3 12h18"></path>
+            <path d="M3 18h18"></path>
+            <path d="M7 4v16"></path>
+            <path d="M17 4v16"></path>
+          </svg>
+          <span>OpenReview</span>
+        </a>
+        <a class="button github-link" href="https://github.com/bonaparte233/event_camera_simulation" target="_blank"
+          rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="18" cy="18" r="3"></circle>
+            <path d="M9 6h3a6 6 0 0 1 6 6v3"></path>
+            <path d="M6 9v12"></path>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a class="button bibtex-link" href="#citation">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M10 11H6a3 3 0 0 0-3 3v5h5v-5h2v-3Z"></path>
+            <path d="M21 11h-4a3 3 0 0 0-3 3v5h5v-5h2v-3Z"></path>
+          </svg>
+          <span>BibTeX</span>
+        </a>
+      </div>
+      <div class="hero-meta" aria-label="Current repository snapshot">
+        <!-- catalog-meta:start -->
           <span class="pill">51 indexed resources</span>
           <span class="pill">29 public GitHub links</span>
           <span class="pill">Coverage through 2026</span>
-          <!-- catalog-meta:end -->
-        </div>
+        <!-- catalog-meta:end -->
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="section" id="claims">
-        <div class="section-header">
-          <h2>What The Review Contributes</h2>
-          <p>
-            The paper treats event-camera simulation as a separate research topic, not only as a preprocessing step for
-            downstream event-vision tasks.
+  <main>
+    <section class="section" id="claims">
+      <div class="section-header">
+        <h2>What The Review Contributes</h2>
+        <p>
+          This review provides a comprehensive and systematic survey centered on event-camera simulation, connecting how
+          synthetic events are generated with how simulation realism and utility are evaluated.
+        </p>
+      </div>
+      <div class="claim-grid">
+        <article class="item accent-green">
+          <h3>Comparison Questions</h3>
+          <p>It compares methods by input source, event-generation assumptions, intended use, and supporting evidence.
           </p>
-        </div>
-        <div class="claim-grid">
-          <article class="item accent-green">
-            <h3>Simulator Design</h3>
-            <p>It compares event-generation pipelines by their sensing assumptions, input modality, output form, and modeled non-idealities.</p>
-          </article>
-          <article class="item accent-red">
-            <h3>Mechanism-Based Categories</h3>
-            <p>It organizes work into physics- and rule-based simulation and learning-based event generation, with route-level distinctions.</p>
-          </article>
-          <article class="item accent-gold">
-            <h3>Evaluation Evidence</h3>
-            <p>It reads realism by claim type: signal fidelity, sensor calibration, scene realism, sim-to-real transfer, and task utility.</p>
-          </article>
-        </div>
-      </section>
+        </article>
+        <article class="item accent-red">
+          <h3>Families and Routes</h3>
+          <p>It defines two method families and five routes: threshold-based, sensor-aware, scene-level, direct, and
+            conditional generation.</p>
+        </article>
+        <article class="item accent-gold">
+          <h3>Claim-Dependent Evaluation</h3>
+          <p>It reviews evidence from signal fidelity and parameter characterization to scene realism, downstream
+            utility, and sim-to-real gap.</p>
+        </article>
+      </div>
+      <div class="figure-band">
+        <img src="assets/figures/overview.svg"
+          alt="Overview of event-camera simulation inputs, simulator categories, outputs, and evaluation uses.">
+        <p class="caption">The overview connects input modalities, simulator categories, output forms, and the
+          evaluation or downstream claims they support.</p>
+      </div>
+    </section>
 
-      <section class="section alt" id="categories">
-        <div class="section-header">
-          <h2>Category Structure</h2>
+    <section class="section alt" id="categories">
+      <div class="section-header">
+        <h2>Category Structure</h2>
+        <p>
+          The category structure follows how events are generated. Physics- and rule-based methods keep the
+          event-formation chain explicit, while learning-based methods learn mappings from input data to events or
+          event representations.
+        </p>
+      </div>
+      <div class="route-grid">
+        <article class="item accent-green">
+          <h3>Physics- and Rule-Based Simulation</h3>
           <p>
-            The categories follow how synthetic events are produced. Evaluation and benchmarking are treated as cross-route
-            evidence rather than a single score.
+            Threshold-based, sensor-aware, and scene-level routes differ by model entry point while preserving an
+            explicit event-formation chain.
           </p>
-        </div>
-        <div class="route-grid">
-          <article class="item accent-green">
-            <h3>Physics- and Rule-Based Simulation</h3>
-            <p>
-              Threshold-based, sensor-level, and scene-level routes preserve an explicit event-formation chain, so their
-              assumptions can be inspected and calibrated.
-            </p>
-          </article>
-          <article class="item accent-red">
-            <h3>Learning-Based Event Generation</h3>
-            <p>
-              Direct and conditional generators learn event streams or event representations from images, videos, prompts,
-              parameters, or control signals.
-            </p>
-          </article>
-        </div>
-        <div class="figure-band">
-          <img src="assets/figures/simulation_framework.svg" alt="Simulator categories used for comparison in the review.">
-          <p class="caption">The figure matches the review's category language and the catalog below.</p>
-        </div>
-      </section>
+        </article>
+        <article class="item accent-red">
+          <h3>Learning-Based Event Generation</h3>
+          <p>
+            Direct and conditional routes learn event streams or event representations from images, videos, latent
+            variables, prompts, parameters, or control signals.
+          </p>
+        </article>
+      </div>
+      <div class="figure-band">
+        <img src="assets/figures/simulation_framework.svg"
+          alt="Simulator categories used for comparison in the review.">
+        <p class="caption">The framework summarizes the categories, routes, and four comparison questions used in the
+          review.</p>
+      </div>
+    </section>
 
-      <section class="section" id="catalog">
-        <div class="section-header">
-          <h2>Living Resource Catalog</h2>
-          <p>
-            The GitHub repository keeps the public-facing resource catalog separate from the paper PDF. The README is the
-            maintained catalog; contribution guidelines and BibTeX entries are maintained alongside it.
-          </p>
-        </div>
-        <div class="stats-grid">
-          <!-- catalog-stats:start -->
+    <section class="section" id="catalog">
+      <div class="section-header">
+        <h2>Living Resource Catalog</h2>
+        <p>
+          The catalog below lists papers and public resources under the same mechanism-based categories used in the
+          review. The grouping helps readers browse methods by event-generation mechanism.
+        </p>
+      </div>
+      <div class="stats-grid">
+        <!-- catalog-stats:start -->
           <article class="item">
             <span class="number">38</span>
             <p>physics- and rule-based resources</p>
@@ -119,10 +163,10 @@
             <span class="number">5</span>
             <p>evaluation and benchmark resources</p>
           </article>
-          <!-- catalog-stats:end -->
-        </div>
-        <div class="catalog-list" aria-live="polite">
-          <!-- catalog-list:start -->
+        <!-- catalog-stats:end -->
+      </div>
+      <div class="catalog-list" aria-live="polite">
+        <!-- catalog-list:start -->
               <section class="catalog-group category-physics">
                 <div class="catalog-group-header">
                   <h3>Physics- and Rule-Based Event-Camera Simulation</h3>
@@ -133,141 +177,141 @@
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Pineda Garcia et al., pyDVS: An Extensible Real-Time Dynamic Vision Sensor Emulator</p>
-                  <p class="catalog-entry-meta">IEEE SSCI 2016</p>
+                  <p class="catalog-entry-title">pyDVS: An Extensible Real-Time Dynamic Vision Sensor Emulator</p>
+                  <p class="catalog-entry-meta">Pineda Garcia et al. · IEEE SSCI 2016</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/SSCI.2016.7850249">paper</a><a href="https://github.com/chanokin/pyDVS">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/SSCI.2016.7850249" target="_blank" rel="noopener">paper</a><a href="https://github.com/chanokin/pyDVS" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Bi and Andreopoulos, PIX2NVS: Parameterized Conversion of Pixel-Domain Video Frames to Neuromorphic Vision Streams</p>
-                  <p class="catalog-entry-meta">ICIP 2017</p>
+                  <p class="catalog-entry-title">PIX2NVS: Parameterized Conversion of Pixel-Domain Video Frames to Neuromorphic Vision Streams</p>
+                  <p class="catalog-entry-meta">Bi and Andreopoulos · ICIP 2017</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICIP.2017.8296630">paper</a><a href="https://github.com/PIX2NVS/PIX2NVS">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICIP.2017.8296630" target="_blank" rel="noopener">paper</a><a href="https://github.com/PIX2NVS/PIX2NVS" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Mueggler et al., The Event-Camera Dataset and Simulator: Event-Based Data for Pose Estimation, Visual Odometry, and SLAM</p>
-                  <p class="catalog-entry-meta">IJRR 2017</p>
+                  <p class="catalog-entry-title">The Event-Camera Dataset and Simulator: Event-Based Data for Pose Estimation, Visual Odometry, and SLAM</p>
+                  <p class="catalog-entry-meta">Mueggler et al. · IJRR 2017</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1177/0278364917691115">paper</a><a href="https://rpg.ifi.uzh.ch/davis_data.html">project</a><a href="https://github.com/uzh-rpg/rpg_davis_simulator">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1177/0278364917691115" target="_blank" rel="noopener">paper</a><a href="https://rpg.ifi.uzh.ch/davis_data.html" target="_blank" rel="noopener">project</a><a href="https://github.com/uzh-rpg/rpg_davis_simulator" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Rebecq, Gehrig, and Scaramuzza, ESIM: an Open Event Camera Simulator</p>
-                  <p class="catalog-entry-meta">CoRL 2018</p>
+                  <p class="catalog-entry-title">ESIM: an Open Event Camera Simulator</p>
+                  <p class="catalog-entry-meta">Rebecq, Gehrig, and Scaramuzza · CoRL 2018</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://proceedings.mlr.press/v87/rebecq18a.html">paper</a><a href="https://rpg.ifi.uzh.ch/esim.html">project</a><a href="https://github.com/uzh-rpg/rpg_esim">code</a></div>
+                <div class="catalog-entry-links"><a href="https://proceedings.mlr.press/v87/rebecq18a.html" target="_blank" rel="noopener">paper</a><a href="https://rpg.ifi.uzh.ch/esim.html" target="_blank" rel="noopener">project</a><a href="https://github.com/uzh-rpg/rpg_esim" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Scheerlinck et al., CED: Color Event Camera Dataset</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2019</p>
+                  <p class="catalog-entry-title">CED: Color Event Camera Dataset</p>
+                  <p class="catalog-entry-meta">Scheerlinck et al. · CVPR Workshops 2019</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW.2019.00215">paper</a><a href="https://rpg.ifi.uzh.ch/CED.html">project</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW.2019.00215" target="_blank" rel="noopener">paper</a><a href="https://rpg.ifi.uzh.ch/CED.html" target="_blank" rel="noopener">project</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Gehrig et al., Video to Events: Recycling Video Datasets for Event Cameras</p>
-                  <p class="catalog-entry-meta">CVPR 2020</p>
+                  <p class="catalog-entry-title">Video to Events: Recycling Video Datasets for Event Cameras</p>
+                  <p class="catalog-entry-meta">Gehrig et al. · CVPR 2020</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPR42600.2020.00364">paper</a><a href="https://github.com/uzh-rpg/rpg_vid2e">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPR42600.2020.00364" target="_blank" rel="noopener">paper</a><a href="https://github.com/uzh-rpg/rpg_vid2e" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Pantho et al., Event Camera Simulator Design for Modeling Attention-based Inference Architectures</p>
-                  <p class="catalog-entry-meta">Journal of Real-Time Image Processing 2022</p>
+                  <p class="catalog-entry-title">Event Camera Simulator Design for Modeling Attention-based Inference Architectures</p>
+                  <p class="catalog-entry-meta">Pantho et al. · Journal of Real-Time Image Processing 2022</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/s11554-021-01191-y">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/s11554-021-01191-y" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Ziegler et al., Real-time Event Simulation with Frame-Based Cameras</p>
-                  <p class="catalog-entry-meta">ICRA 2023</p>
+                  <p class="catalog-entry-title">Real-time Event Simulation with Frame-Based Cameras</p>
+                  <p class="catalog-entry-meta">Ziegler et al. · ICRA 2023</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2209.04634">paper</a><a href="https://cogsys-tuebingen.github.io/realtime_event_simulator/">project</a><a href="https://github.com/cogsys-tuebingen/event_simulator">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2209.04634" target="_blank" rel="noopener">paper</a><a href="https://cogsys-tuebingen.github.io/realtime_event_simulator/" target="_blank" rel="noopener">project</a><a href="https://github.com/cogsys-tuebingen/event_simulator" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Ma et al., I2E: Real-Time Image-to-Event Conversion for High-Performance Spiking Neural Networks</p>
-                  <p class="catalog-entry-meta">AAAI 2026</p>
+                  <p class="catalog-entry-title">I2E: Real-Time Image-to-Event Conversion for High-Performance Spiking Neural Networks</p>
+                  <p class="catalog-entry-meta">Ma et al. · AAAI 2026</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1609/aaai.v40i3.37179">paper</a><a href="https://github.com/Ruichen0424/I2E">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1609/aaai.v40i3.37179" target="_blank" rel="noopener">paper</a><a href="https://github.com/Ruichen0424/I2E" target="_blank" rel="noopener">code</a></div>
               </li>
                 </ul>
               </section>
               <section class="catalog-route">
-                <h4>Sensor-Level Simulation</h4>
+                <h4>Sensor-Aware Simulation</h4>
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Stoffregen et al., Reducing the Sim-to-Real Gap for Event Cameras</p>
-                  <p class="catalog-entry-meta">ECCV 2020</p>
+                  <p class="catalog-entry-title">Reducing the Sim-to-Real Gap for Event Cameras</p>
+                  <p class="catalog-entry-meta">Stoffregen et al. · ECCV 2020</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-030-58583-9_32">paper</a><a href="https://timostoff.github.io/20ecnn">project</a><a href="https://github.com/TimoStoff/event_cnn_minimal">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-030-58583-9_32" target="_blank" rel="noopener">paper</a><a href="https://timostoff.github.io/20ecnn" target="_blank" rel="noopener">project</a><a href="https://github.com/TimoStoff/event_cnn_minimal" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Joubert et al., Event Camera Simulator Improvements via Characterized Parameters</p>
-                  <p class="catalog-entry-meta">Frontiers in Neuroscience 2021</p>
+                  <p class="catalog-entry-title">Event Camera Simulator Improvements via Characterized Parameters</p>
+                  <p class="catalog-entry-meta">Joubert et al. · Frontiers in Neuroscience 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.3389/fnins.2021.702765">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.3389/fnins.2021.702765" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Hu, Liu, and Delbruck, v2e: From Video Frames to Realistic DVS Events</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2021</p>
+                  <p class="catalog-entry-title">v2e: From Video Frames to Realistic DVS Events</p>
+                  <p class="catalog-entry-meta">Hu, Liu, and Delbruck · CVPR Workshops 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW53098.2021.00144">paper</a><a href="https://github.com/SensorsINI/v2e">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW53098.2021.00144" target="_blank" rel="noopener">paper</a><a href="https://github.com/SensorsINI/v2e" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Radomski et al., Enhanced Frame and Event-Based Simulator and Event-Based Video Interpolation Network</p>
-                  <p class="catalog-entry-meta">arXiv 2021</p>
+                  <p class="catalog-entry-title">Enhanced Frame and Event-Based Simulator and Event-Based Video Interpolation Network</p>
+                  <p class="catalog-entry-meta">Radomski et al. · arXiv 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2112.09379">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2112.09379" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Mou et al., Accurate Event Simulation using High-Speed Videos</p>
-                  <p class="catalog-entry-meta">Electronic Imaging 2022</p>
+                  <p class="catalog-entry-title">Accurate Event Simulation using High-Speed Videos</p>
+                  <p class="catalog-entry-meta">Mou et al. · Electronic Imaging 2022</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.2352/EI.2022.34.7.ISS-242">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.2352/EI.2022.34.7.ISS-242" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Lin et al., DVS-Voltmeter: Stochastic Process-Based Event Simulator for Dynamic Vision Sensors</p>
-                  <p class="catalog-entry-meta">ECCV 2022</p>
+                  <p class="catalog-entry-title">DVS-Voltmeter: Stochastic Process-Based Event Simulator for Dynamic Vision Sensors</p>
+                  <p class="catalog-entry-meta">Lin et al. · ECCV 2022</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-031-20071-7_34">paper</a><a href="https://github.com/Lynn0306/DVS-Voltmeter">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-031-20071-7_34" target="_blank" rel="noopener">paper</a><a href="https://github.com/Lynn0306/DVS-Voltmeter" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Jiang, Zhou, and Lin, ADV2E: Bridging the Gap Between Analogue Circuit and Discrete Frames in the Video-to-Events Simulator</p>
-                  <p class="catalog-entry-meta">arXiv 2024</p>
+                  <p class="catalog-entry-title">ADV2E: Bridging the Gap Between Analogue Circuit and Discrete Frames in the Video-to-Events Simulator</p>
+                  <p class="catalog-entry-meta">Jiang, Zhou, and Lin · arXiv 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2411.12250">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2411.12250" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Ning et al., Raw2Event: Converting Raw Frame Camera into Event Camera</p>
-                  <p class="catalog-entry-meta">arXiv 2025</p>
+                  <p class="catalog-entry-title">Raw2Event: Converting Raw Frame Camera into Event Camera</p>
+                  <p class="catalog-entry-meta">Ning et al. · arXiv 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2509.06767">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2509.06767" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Lu et al., Hybrid Event Frame Sensors: Modeling, Calibration, and Simulation</p>
-                  <p class="catalog-entry-meta">arXiv 2025</p>
+                  <p class="catalog-entry-title">Hybrid Event Frame Sensors: Modeling, Calibration, and Simulation</p>
+                  <p class="catalog-entry-meta">Lu et al. · arXiv 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2511.18037">paper</a><a href="https://yunfanlu.github.io/HESIM/">project</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2511.18037" target="_blank" rel="noopener">paper</a><a href="https://yunfanlu.github.io/HESIM/" target="_blank" rel="noopener">project</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Lou et al., V2V: Scaling Event-Based Vision through Efficient Video-to-Voxel Simulation</p>
-                  <p class="catalog-entry-meta">NeurIPS 2025</p>
+                  <p class="catalog-entry-title">V2V: Scaling Event-Based Vision through Efficient Video-to-Voxel Simulation</p>
+                  <p class="catalog-entry-meta">Lou et al. · NeurIPS 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2505.16797">paper</a><a href="https://neurips.cc/virtual/2025/poster/118917">project</a><a href="https://github.com/HYLZ-2019/V2V">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2505.16797" target="_blank" rel="noopener">paper</a><a href="https://neurips.cc/virtual/2025/poster/118917" target="_blank" rel="noopener">project</a><a href="https://github.com/HYLZ-2019/V2V" target="_blank" rel="noopener">code</a></div>
               </li>
                 </ul>
               </section>
@@ -276,115 +320,115 @@
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Kaiser et al., Towards a Framework for End-to-End Control of a Simulated Vehicle with Spiking Neural Networks</p>
-                  <p class="catalog-entry-meta">SIMPAR 2016</p>
+                  <p class="catalog-entry-title">Towards a Framework for End-to-End Control of a Simulated Vehicle with Spiking Neural Networks</p>
+                  <p class="catalog-entry-meta">Kaiser et al. · SIMPAR 2016</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/SIMPAR.2016.7862386">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/SIMPAR.2016.7862386" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Li et al., InteriorNet: Mega-scale Multi-sensor Photo-realistic Indoor Scenes Dataset</p>
-                  <p class="catalog-entry-meta">BMVC 2018</p>
+                  <p class="catalog-entry-title">InteriorNet: Mega-scale Multi-sensor Photo-realistic Indoor Scenes Dataset</p>
+                  <p class="catalog-entry-meta">Li et al. · BMVC 2018</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://interiornet.org/">project</a><a href="https://interiornet.org/items/interiornet_paper.pdf">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://interiornet.org/" target="_blank" rel="noopener">project</a><a href="https://interiornet.org/items/interiornet_paper.pdf" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Rizzo, Schuman, and Plank, Event-Based Camera Simulation Wrapper for Arcade Learning Environment</p>
-                  <p class="catalog-entry-meta">ICONS 2022</p>
+                  <p class="catalog-entry-title">Event-Based Camera Simulation Wrapper for Arcade Learning Environment</p>
+                  <p class="catalog-entry-meta">Rizzo, Schuman, and Plank · ICONS 2022</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3546790.3546817">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3546790.3546817" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Palinauskas et al., Generating Event-Based Datasets for Robotic Applications using MuJoCo-ESIM</p>
-                  <p class="catalog-entry-meta">ICONS 2023</p>
+                  <p class="catalog-entry-title">Generating Event-Based Datasets for Robotic Applications using MuJoCo-ESIM</p>
+                  <p class="catalog-entry-meta">Palinauskas et al. · ICONS 2023</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3589737.3605984">paper</a><a href="https://github.com/fortissNC/Mujoco-ESIM">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3589737.3605984" target="_blank" rel="noopener">paper</a><a href="https://github.com/fortissNC/Mujoco-ESIM" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Tsuji et al., Event-Based Camera Simulation Using Monte Carlo Path Tracing with Adaptive Denoising</p>
-                  <p class="catalog-entry-meta">ICIP 2023</p>
+                  <p class="catalog-entry-title">Event-Based Camera Simulation Using Monte Carlo Path Tracing with Adaptive Denoising</p>
+                  <p class="catalog-entry-meta">Tsuji et al. · ICIP 2023</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICIP49359.2023.10222771">paper</a><a href="https://github.com/0V/ESIM-AD">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICIP49359.2023.10222771" target="_blank" rel="noopener">paper</a><a href="https://github.com/0V/ESIM-AD" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Li et al., BlinkFlow: A Dataset to Push the Limits of Event-based Optical Flow Estimation</p>
-                  <p class="catalog-entry-meta">IROS 2023</p>
+                  <p class="catalog-entry-title">BlinkFlow: A Dataset to Push the Limits of Event-based Optical Flow Estimation</p>
+                  <p class="catalog-entry-meta">Li et al. · IROS 2023</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2303.07716">paper</a><a href="https://zju3dv.github.io/blinkflow/">project</a><a href="https://github.com/zju3dv/blink_sim">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2303.07716" target="_blank" rel="noopener">paper</a><a href="https://zju3dv.github.io/blinkflow/" target="_blank" rel="noopener">project</a><a href="https://github.com/zju3dv/blink_sim" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Han et al., Physical-Based Event Camera Simulator</p>
-                  <p class="catalog-entry-meta">ECCV 2024</p>
+                  <p class="catalog-entry-title">Physical-Based Event Camera Simulator</p>
+                  <p class="catalog-entry-meta">Han et al. · ECCV 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-031-72995-9_2">paper</a><a href="https://github.com/lanpokn/PECS_trail_version">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1007/978-3-031-72995-9_2" target="_blank" rel="noopener">paper</a><a href="https://github.com/lanpokn/PECS_trail_version" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Manabe et al., Monte Carlo Path Tracing and Statistical Event Detection for Event Camera Simulation</p>
-                  <p class="catalog-entry-meta">ICCP 2024</p>
+                  <p class="catalog-entry-title">Monte Carlo Path Tracing and Statistical Event Detection for Event Camera Simulation</p>
+                  <p class="catalog-entry-meta">Manabe et al. · ICCP 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICCP61108.2024.10644728">paper</a><a href="https://github.com/ichi-raven/MC-EBCS">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICCP61108.2024.10644728" target="_blank" rel="noopener">paper</a><a href="https://github.com/ichi-raven/MC-EBCS" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Reinold, Ghosh, and Gallego, Combined Physics and Event Camera Simulator for Slip Detection</p>
-                  <p class="catalog-entry-meta">WACV Workshops 2025</p>
+                  <p class="catalog-entry-title">Combined Physics and Event Camera Simulator for Slip Detection</p>
+                  <p class="catalog-entry-meta">Reinold, Ghosh, and Gallego · WACV Workshops 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/WACVW65960.2025.00104">paper</a><a href="https://github.com/tub-rip/event_slip">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/WACVW65960.2025.00104" target="_blank" rel="noopener">paper</a><a href="https://github.com/tub-rip/event_slip" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Rodriguez et al., An Event Camera Simulator for Arbitrary Viewpoints Based on Neural Radiance Fields</p>
-                  <p class="catalog-entry-meta">VISAPP 2025</p>
+                  <p class="catalog-entry-title">An Event Camera Simulator for Arbitrary Viewpoints Based on Neural Radiance Fields</p>
+                  <p class="catalog-entry-meta">Rodriguez et al. · VISAPP 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.5220/0013388400003912">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.5220/0013388400003912" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Li et al., GS2E: Gaussian Splatting is an Effective Data Generator for Event Stream Generation</p>
-                  <p class="catalog-entry-meta">arXiv 2025</p>
+                  <p class="catalog-entry-title">GS2E: Gaussian Splatting is an Effective Data Generator for Event Stream Generation</p>
+                  <p class="catalog-entry-meta">Li et al. · arXiv 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2505.15287">paper</a><a href="https://intothemild.github.io/GS2E.github.io/">project</a><a href="https://github.com/PKU-YuanGroup/GS2E">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2505.15287" target="_blank" rel="noopener">paper</a><a href="https://intothemild.github.io/GS2E.github.io/" target="_blank" rel="noopener">project</a><a href="https://github.com/PKU-YuanGroup/GS2E" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Li et al., EventTracer: Fast Path Tracing-Based Event Stream Rendering</p>
-                  <p class="catalog-entry-meta">arXiv 2025</p>
+                  <p class="catalog-entry-title">EventTracer: Fast Path Tracing-Based Event Stream Rendering</p>
+                  <p class="catalog-entry-meta">Li et al. · arXiv 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2508.18071">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2508.18071" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Kyatham et al., EREBUS: End-to-End Robust Event Based Underwater Simulation</p>
-                  <p class="catalog-entry-meta">arXiv 2025</p>
+                  <p class="catalog-entry-title">EREBUS: End-to-End Robust Event Based Underwater Simulation</p>
+                  <p class="catalog-entry-meta">Kyatham et al. · arXiv 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2511.01381">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2511.01381" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Middleton et al., Modelling and Simulation of Neuromorphic Datasets for Anomaly Detection in Computer Vision</p>
-                  <p class="catalog-entry-meta">arXiv 2026</p>
+                  <p class="catalog-entry-title">Modelling and Simulation of Neuromorphic Datasets for Anomaly Detection in Computer Vision</p>
+                  <p class="catalog-entry-meta">Middleton et al. · arXiv 2026</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2602.23514">paper</a><a href="https://github.com/EDGYOrganism/ANTShapes">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2602.23514" target="_blank" rel="noopener">paper</a><a href="https://github.com/EDGYOrganism/ANTShapes" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
                   <p class="catalog-entry-title">CARLA DVS plugin</p>
                   <p class="catalog-entry-meta">Public resource</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/1711.03938">platform paper</a><a href="https://carla.org/">project</a><a href="https://carla.readthedocs.io/en/latest/ref_sensors/#dvs-camera">docs</a><a href="https://github.com/carla-simulator/carla">code</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/1711.03938" target="_blank" rel="noopener">platform paper</a><a href="https://carla.org/" target="_blank" rel="noopener">project</a><a href="https://carla.readthedocs.io/en/latest/ref_sensors/#dvs-camera" target="_blank" rel="noopener">docs</a><a href="https://github.com/carla-simulator/carla" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
                   <p class="catalog-entry-title">Microsoft AirSim Event Camera simulation plugin</p>
                   <p class="catalog-entry-meta">Public resource</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://microsoft.github.io/AirSim/event_sim/">docs</a><a href="https://github.com/microsoft/AirSim">code</a></div>
+                <div class="catalog-entry-links"><a href="https://microsoft.github.io/AirSim/event_sim/" target="_blank" rel="noopener">docs</a><a href="https://github.com/microsoft/AirSim" target="_blank" rel="noopener">code</a></div>
               </li>
                 </ul>
               </section>
@@ -393,24 +437,24 @@
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Nehvi et al., Differentiable Event Stream Simulator for Non-Rigid 3D Tracking</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2021</p>
+                  <p class="catalog-entry-title">Differentiable Event Stream Simulator for Non-Rigid 3D Tracking</p>
+                  <p class="catalog-entry-meta">Nehvi et al. · CVPR Workshops 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2104.15139">paper</a><a href="http://gvv.mpi-inf.mpg.de/projects/Event-based_Non-rigid_3D_Tracking">project</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2104.15139" target="_blank" rel="noopener">paper</a><a href="http://gvv.mpi-inf.mpg.de/projects/Event-based_Non-rigid_3D_Tracking" target="_blank" rel="noopener">project</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Gu et al., How to Learn a Domain-Adaptive Event Simulator</p>
-                  <p class="catalog-entry-meta">ACM MM 2021</p>
+                  <p class="catalog-entry-title">How to Learn a Domain-Adaptive Event Simulator</p>
+                  <p class="catalog-entry-meta">Gu et al. · ACM MM 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3474085.3475229">paper</a><a href="https://github.com/iCVTEAM/LETGAN">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1145/3474085.3475229" target="_blank" rel="noopener">paper</a><a href="https://github.com/iCVTEAM/LETGAN" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Greene et al., SENPI: A PyTorch-Enabled Tool for Synthetic Event Camera Data Generation and Algorithm Development</p>
-                  <p class="catalog-entry-meta">SPIE Synthetic Data for AI/ML 2025</p>
+                  <p class="catalog-entry-title">SENPI: A PyTorch-Enabled Tool for Synthetic Event Camera Data Generation and Algorithm Development</p>
+                  <p class="catalog-entry-meta">Greene et al. · SPIE Synthetic Data for AI/ML 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1117/12.3053238">paper</a><a href="https://github.com/joeg18/senpi_ebi">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1117/12.3053238" target="_blank" rel="noopener">paper</a><a href="https://github.com/joeg18/senpi_ebi" target="_blank" rel="noopener">code</a></div>
               </li>
                 </ul>
               </section>
@@ -425,31 +469,31 @@
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Zhu et al., EventGAN: Leveraging Large Scale Image Datasets for Event Cameras</p>
-                  <p class="catalog-entry-meta">ICCP 2021</p>
+                  <p class="catalog-entry-title">EventGAN: Leveraging Large Scale Image Datasets for Event Cameras</p>
+                  <p class="catalog-entry-meta">Zhu et al. · ICCP 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICCP51581.2021.9466265">paper</a><a href="https://github.com/alexzzhu/EventGAN">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICCP51581.2021.9466265" target="_blank" rel="noopener">paper</a><a href="https://github.com/alexzzhu/EventGAN" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Masuda et al., Neural Implicit Event Generator for Motion Tracking</p>
-                  <p class="catalog-entry-meta">ICRA 2022</p>
+                  <p class="catalog-entry-title">Neural Implicit Event Generator for Motion Tracking</p>
+                  <p class="catalog-entry-meta">Masuda et al. · ICRA 2022</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICRA46639.2022.9812142">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICRA46639.2022.9812142" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Zhang et al., V2CE: Video to Continuous Events Simulator</p>
-                  <p class="catalog-entry-meta">ICRA 2024</p>
+                  <p class="catalog-entry-title">V2CE: Video to Continuous Events Simulator</p>
+                  <p class="catalog-entry-meta">Zhang et al. · ICRA 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICRA57147.2024.10609864">paper</a><a href="https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/ICRA57147.2024.10609864" target="_blank" rel="noopener">paper</a><a href="https://github.com/ucsd-hdsi-dvs/V2CE-Toolbox" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Bhattacharya et al., EvDNeRF: Reconstructing Event Data with Dynamic Neural Radiance Fields</p>
-                  <p class="catalog-entry-meta">WACV 2024</p>
+                  <p class="catalog-entry-title">EvDNeRF: Reconstructing Event Data with Dynamic Neural Radiance Fields</p>
+                  <p class="catalog-entry-meta">Bhattacharya et al. · WACV 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/WACV57701.2024.00574">paper</a><a href="https://www.anishbhattacharya.com/research/evdnerf">project</a><a href="https://github.com/anish-bhattacharya/EvDNeRF">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/WACV57701.2024.00574" target="_blank" rel="noopener">paper</a><a href="https://www.anishbhattacharya.com/research/evdnerf" target="_blank" rel="noopener">project</a><a href="https://github.com/anish-bhattacharya/EvDNeRF" target="_blank" rel="noopener">code</a></div>
               </li>
                 </ul>
               </section>
@@ -458,31 +502,31 @@
                 <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Gu et al., Reliable Event Generation With Invertible Conditional Normalizing Flow</p>
-                  <p class="catalog-entry-meta">IEEE TPAMI 2024</p>
+                  <p class="catalog-entry-title">Reliable Event Generation With Invertible Conditional Normalizing Flow</p>
+                  <p class="catalog-entry-meta">Gu et al. · IEEE TPAMI 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/TPAMI.2023.3326538">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/TPAMI.2023.3326538" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Ott, Wang, and Liu, Text-to-Events: Synthetic Event Camera Streams from Conditional Text Input</p>
-                  <p class="catalog-entry-meta">NICE 2024</p>
+                  <p class="catalog-entry-title">Text-to-Events: Synthetic Event Camera Streams from Conditional Text Input</p>
+                  <p class="catalog-entry-meta">Ott, Wang, and Liu · NICE 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2406.03439">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2406.03439" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Zhang et al., An Event-Oriented Diffusion-Refinement Method for Sparse Events Completion</p>
-                  <p class="catalog-entry-meta">Scientific Reports 2024</p>
+                  <p class="catalog-entry-title">An Event-Oriented Diffusion-Refinement Method for Sparse Events Completion</p>
+                  <p class="catalog-entry-meta">Zhang et al. · Scientific Reports 2024</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1038/s41598-024-57333-2">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1038/s41598-024-57333-2" target="_blank" rel="noopener">paper</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Hu et al., ControlEvents: Controllable Synthesis of Event Camera Data with Foundational Prior from Image Diffusion Models</p>
-                  <p class="catalog-entry-meta">WACV 2026</p>
+                  <p class="catalog-entry-title">ControlEvents: Controllable Synthesis of Event Camera Data with Foundational Prior from Image Diffusion Models</p>
+                  <p class="catalog-entry-meta">Hu et al. · WACV 2026</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2509.22864">paper</a><a href="https://yuxuan-xue.com/controlevents/">project</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2509.22864" target="_blank" rel="noopener">paper</a><a href="https://yuxuan-xue.com/controlevents/" target="_blank" rel="noopener">project</a></div>
               </li>
                 </ul>
               </section>
@@ -495,111 +539,114 @@
               <ul class="catalog-resource-list">
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Cannici et al., N-ROD: A Neuromorphic Dataset for Synthetic-to-Real Domain Adaptation</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2021</p>
+                  <p class="catalog-entry-title">N-ROD: A Neuromorphic Dataset for Synthetic-to-Real Domain Adaptation</p>
+                  <p class="catalog-entry-meta">Cannici et al. · CVPR Workshops 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://openaccess.thecvf.com/content/CVPR2021W/EventVision/papers/Cannici_N-ROD_A_Neuromorphic_Dataset_for_Synthetic-to-Real_Domain_Adaptation_CVPRW_2021_paper.pdf">paper</a><a href="https://n-rod-dataset.github.io/home/">project</a></div>
+                <div class="catalog-entry-links"><a href="https://openaccess.thecvf.com/content/CVPR2021W/EventVision/papers/Cannici_N-ROD_A_Neuromorphic_Dataset_for_Synthetic-to-Real_Domain_Adaptation_CVPRW_2021_paper.pdf" target="_blank" rel="noopener">paper</a><a href="https://n-rod-dataset.github.io/home/" target="_blank" rel="noopener">project</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Planamente et al., DA4Event: Towards Bridging the Sim-to-Real Gap for Event Cameras Using Domain Adaptation</p>
-                  <p class="catalog-entry-meta">IEEE RA-L 2021</p>
+                  <p class="catalog-entry-title">DA4Event: Towards Bridging the Sim-to-Real Gap for Event Cameras Using Domain Adaptation</p>
+                  <p class="catalog-entry-meta">Planamente et al. · IEEE RA-L 2021</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/LRA.2021.3093870">paper</a><a href="https://github.com/DA4EVENT/home">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/LRA.2021.3093870" target="_blank" rel="noopener">paper</a><a href="https://github.com/DA4EVENT/home" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Ziegler et al., BiasBench: A Reproducible Benchmark for Tuning the Biases of Event Cameras</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2025</p>
+                  <p class="catalog-entry-title">BiasBench: A Reproducible Benchmark for Tuning the Biases of Event Cameras</p>
+                  <p class="catalog-entry-meta">Ziegler et al. · CVPR Workshops 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW67362.2025.00493">paper</a><a href="https://cogsys-tuebingen.github.io/biasbench/">project</a><a href="https://github.com/cogsys-tuebingen/biasbench">code</a></div>
+                <div class="catalog-entry-links"><a href="https://doi.org/10.1109/CVPRW67362.2025.00493" target="_blank" rel="noopener">paper</a><a href="https://cogsys-tuebingen.github.io/biasbench/" target="_blank" rel="noopener">project</a><a href="https://github.com/cogsys-tuebingen/biasbench" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Chanda et al., Event Quality Score (EQS): Assessing the Realism of Simulated Event Camera Streams via Distances in Latent Space</p>
-                  <p class="catalog-entry-meta">CVPR Workshops 2025</p>
+                  <p class="catalog-entry-title">Event Quality Score (EQS): Assessing the Realism of Simulated Event Camera Streams via Distances in Latent Space</p>
+                  <p class="catalog-entry-meta">Chanda et al. · CVPR Workshops 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://ieeexplore.ieee.org/document/11147485">paper</a><a href="https://github.com/eventbasedvision/EQS">code</a></div>
+                <div class="catalog-entry-links"><a href="https://ieeexplore.ieee.org/document/11147485" target="_blank" rel="noopener">paper</a><a href="https://github.com/eventbasedvision/EQS" target="_blank" rel="noopener">code</a></div>
               </li>
               <li class="catalog-entry">
                 <div class="catalog-entry-main">
-                  <p class="catalog-entry-title">Tan, B N, and Chakravarthi, How Real is CARLA&#x27;s Dynamic Vision Sensor? A Study on the Sim-to-Real Gap in Traffic Object Detection</p>
-                  <p class="catalog-entry-meta">CVIP 2025</p>
+                  <p class="catalog-entry-title">How Real is CARLA&#x27;s Dynamic Vision Sensor? A Study on the Sim-to-Real Gap in Traffic Object Detection</p>
+                  <p class="catalog-entry-meta">Tan, B N, and Chakravarthi · CVIP 2025</p>
                 </div>
-                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2506.13722">paper</a></div>
+                <div class="catalog-entry-links"><a href="https://arxiv.org/abs/2506.13722" target="_blank" rel="noopener">paper</a></div>
               </li>
               </ul>
               </section>
-          <!-- catalog-list:end -->
-        </div>
-        <p class="catalog-note">Resources are grouped by the same category structure used in the <a href="README.md">README catalog</a>.</p>
-      </section>
-
-      <section class="section alt">
-        <div class="section-header">
-          <h2>Evaluation Is Claim-Dependent</h2>
-          <p>
-            The page highlights the review's core caution: event-count accuracy, timestamp fidelity, parameter calibration,
-            scene realism, and downstream gains support different claims.
-          </p>
-        </div>
-        <div class="figure-band">
-          <img src="assets/figures/realism.svg" alt="Layered view of event-camera simulator realism evidence.">
-          <p class="caption">The companion page keeps the realism framing visible because this is the practical part readers need when selecting a simulator.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <h2>Repository Contents</h2>
-          <p>
-            The repository is designed as a companion resource for the review, with a curated catalog, contribution
-            guidance, and reference metadata.
-          </p>
-        </div>
-        <div class="resource-grid">
-          <article class="item accent-green">
-            <h3>Resource Catalog</h3>
-            <p><a href="#catalog">Browse the on-page catalog</a> grouped by the review's simulation categories.</p>
-          </article>
-          <article class="item accent-red">
-            <h3>Category Structure</h3>
-            <p><a href="README.md#physics--and-rule-based-event-camera-simulation">Use the README categories</a> to browse simulation routes and modeling assumptions.</p>
-          </article>
-          <article class="item accent-gold">
-            <h3>BibTeX Data</h3>
-            <p><a href="data/event_camera_simulation_references.bib">Use the reference file</a> for citation metadata maintained with the catalog.</p>
-          </article>
-          <article class="item accent-blue">
-            <h3>Contribution Rules</h3>
-            <p><a href="CONTRIBUTING.md">Add entries conservatively</a> with paper metadata, public links, and category evidence.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section alt" id="citation">
-        <div class="section-header">
-          <h2>Citation</h2>
-          <p>
-            A citable paper record is not yet public. Until then, cite the individual papers in the catalog.
-          </p>
-        </div>
-        <div class="citation-box">
-<pre>@misc{event_camera_simulation_review,
-  title = {Event-Camera Simulation: A Review},
-  note = {Citation metadata will be updated after public release},
-  year = {2026}
-}</pre>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span>Companion page for Event-Camera Simulation: A Review.</span>
-        <span>Paper and preprint links will be added when they are public.</span>
+        <!-- catalog-list:end -->
       </div>
-    </footer>
+    </section>
 
-  </body>
+    <section class="section alt">
+      <div class="section-header">
+        <h2>Evaluation Is Claim-Dependent</h2>
+        <p>
+          Evaluation depends on the claim being made. Signal statistics, fitted parameters, scene realism, downstream
+          utility, and sim-to-real transfer are different evidence layers rather than one realism score.
+        </p>
+      </div>
+      <div class="figure-band">
+        <img src="assets/figures/realism.svg" alt="Layered view of event-camera simulator realism evidence.">
+        <p class="caption">The realism view separates device-level, scene-level, representation-level, downstream, and
+          sim-to-real evidence.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="citation">
+      <div class="section-header">
+        <h2>Citation</h2>
+        <p>
+          If you find this work useful, please cite:
+        </p>
+      </div>
+      <div class="citation-box">
+        <button class="copy-button" type="button" data-copy-target="bibtex-entry">Copy</button>
+        <pre id="bibtex-entry">@misc{chen2026eventsim,
+  title={Event-Camera Simulation: A Review},
+  author={Langyi, Chen and Chuanzhi, Xu and Haoxian, Zhou and Haodong, Chen and Qiang, Qu and Weidong, Cai},
+  url={https://openreview.net/pdf?id=gal0rSykxm},
+  year={2026}
+}</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Companion page for Event-Camera Simulation: A Review.</span>
+      <span>The catalog is maintained in the <a href="https://github.com/bonaparte233/event_camera_simulation"
+          target="_blank" rel="noopener">GitHub repository</a>, contributions are welcome.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("[data-copy-target]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.copyTarget);
+        if (!target) return;
+        const text = target.textContent;
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "fixed";
+          textarea.style.opacity = "0";
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          textarea.remove();
+        }
+        const original = button.textContent;
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = original;
+        }, 1600);
+      });
+    });
+  </script>
+</body>
+
 </html>

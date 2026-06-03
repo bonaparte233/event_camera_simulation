@@ -44,7 +44,7 @@ The GitHub workflow checks pull requests and synchronizes generated page blocks 
 
 ## Category Labels
 
-Choose one category path from the hierarchy below. The categories follow the review's mechanism-based framing: methods are grouped by how events are generated, not by the downstream task they support.
+Choose one category path from the hierarchy below. The categories follow the review's mechanism-based framing: methods are grouped by how events are generated.
 
 - `Physics- and Rule-Based Event-Camera Simulation`
 

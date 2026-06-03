@@ -159,16 +159,43 @@ h3 {
   box-shadow: 0 1px 0 rgba(24, 33, 31, 0.04);
 }
 
+.button svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button span {
+  min-width: 0;
+}
+
 .button.primary {
   border-color: var(--green);
   background: var(--green);
   color: #fff;
 }
 
-.button.pending {
-  color: #6d6250;
-  background: #f5efe3;
-  border-color: #e4d6bd;
+.button.openreview-link {
+  border-color: #d5b06f;
+  background: #f3e2bf;
+  color: #4d3c1d;
+}
+
+.button.github-link {
+  border-color: #25332f;
+  background: #1d2825;
+  color: #fff;
+}
+
+.button.bibtex-link {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
 }
 
 .button:hover {
@@ -219,7 +246,16 @@ main {
   margin: 0;
   color: var(--muted);
   font-size: 1.02rem;
+  font-style: italic;
   overflow-wrap: anywhere;
+}
+
+#citation .section-header {
+  align-items: center;
+}
+
+#citation .section-header p {
+  text-align: right;
 }
 
 .claim-grid,
@@ -304,10 +340,12 @@ main {
 }
 
 .caption {
-  max-width: 900px;
+  max-width: none;
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 0.94rem;
+  font-style: italic;
+  text-align: center;
 }
 
 .catalog-list {
@@ -465,9 +503,10 @@ main {
 }
 
 .citation-box {
+  position: relative;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 18px;
+  padding: 48px 18px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #1d2523;
@@ -479,6 +518,26 @@ main {
   margin: 0;
   font: 0.92rem/1.55 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   white-space: pre-wrap;
+}
+
+.copy-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgba(245, 248, 245, 0.24);
+  border-radius: 6px;
+  background: rgba(245, 248, 245, 0.1);
+  color: #f5f8f5;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 680;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background: rgba(245, 248, 245, 0.18);
 }
 
 .site-footer {
@@ -496,6 +555,11 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
+}
+
+.site-footer a {
+  color: var(--green);
+  font-weight: 650;
 }
 
 @media (max-width: 860px) {
@@ -544,6 +608,10 @@ main {
   .resource-grid > *,
   .stats-grid > * {
     min-width: 0;
+  }
+
+  #citation .section-header p {
+    text-align: left;
   }
 
   .catalog-group-header,
