@@ -46,15 +46,19 @@ PAGE_REQUIRED_PATTERNS = {
 }
 
 PAGE_FORBIDDEN_SUBSTRINGS = {
-    "old Resource Catalog button": ">Resource Catalog<",
-    "old Contribution Guide button": ">Contribution Guide<",
-    "old BibTeX Data button": ">BibTeX Data<",
-    "old paper placeholder button": "Paper Record Coming Soon",
-    "old repository contents section": "Repository Contents",
-    "public paper-list BibTeX link": "event_camera_simulation_references.bib",
+    "Resource Catalog button": ">Resource Catalog<",
+    "Contribution Guide button": ">Contribution Guide<",
+    "BibTeX Data button": ">BibTeX Data<",
+    "paper placeholder button": "Paper Record Coming Soon",
+    "repository contents section": "Repository Contents",
     "disabled hero link": 'aria-disabled="true"',
-    "removed hero lede": 'class="lede"',
-    "legacy table script": "assets/site.js",
+    "hero lede class": 'class="lede"',
+    "table script": "assets/site.js",
+}
+
+PAGE_FORBIDDEN_PATTERNS = {
+    "BibTeX file link": r'href="[^"]*\.bib"',
+    "data path link": r'href="[^"]*data/',
 }
 
 # Catalog links use the bracketed resource style: [[label](https://...)].
@@ -325,6 +329,11 @@ def validate_page_contract(index_text: str) -> None:
         for description, needle in PAGE_FORBIDDEN_SUBSTRINGS.items()
         if needle in index_text
     ]
+    forbidden.extend(
+        description
+        for description, pattern in PAGE_FORBIDDEN_PATTERNS.items()
+        if re.search(pattern, index_text)
+    )
     if missing or forbidden:
         problems = []
         if missing:

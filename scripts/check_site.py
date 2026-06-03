@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the public companion repository."""
+"""Validate the companion repository."""
 
 from __future__ import annotations
 
@@ -21,7 +21,6 @@ REQUIRED_FILES = [
     "assets/figures/abstract.svg",
     "assets/figures/simulation_framework.svg",
     "assets/figures/realism.svg",
-    "data/event_camera_simulation_references.bib",
 ]
 
 
@@ -47,7 +46,7 @@ def main() -> int:
     csv_files = sorted((ROOT / "data").glob("*.csv"))
     if csv_files:
         names = ", ".join(path.name for path in csv_files)
-        return fail(f"tabular data exports should not be published: {names}")
+        return fail(f"unexpected data files: {names}")
 
     html = INDEX_PATH.read_text(encoding="utf-8")
     for asset in [
@@ -58,11 +57,11 @@ def main() -> int:
         if asset not in html:
             return fail(f"index.html does not reference {asset}")
 
-    if re.search(r"\.csv|assets/site\.js", html):
-        return fail("index.html still references generated data-table assets")
+    if re.search(r"\.csv|\.bib|assets/site\.js|href=\"[^\"]*data/", html):
+        return fail("index.html references unsupported generated assets")
 
     if re.search(r"arxiv\.org/abs/(TODO|TBD)|openreview\.net/forum\?id=(TODO|TBD)", html):
-        return fail("index.html contains placeholder public-paper links")
+        return fail("index.html contains placeholder links")
 
     generated = sync_index()
     if generated != html:
