@@ -2,9 +2,9 @@
 
 Companion repository for **Event-Camera Simulation: A Review**.
 
-This page collects papers and public resources related to event-camera simulation. The list follows the review's mechanism-based categories: physics- and rule-based simulators, learning-based event generation, and Evaluation and Sim-to-Real Analysis resources.
+This page collects papers and public resources related to event-camera simulation. The list follows the review's mechanism-based categories: physics- and rule-based simulation, learning-based event generation, and Evaluation and Sim-to-Real Analysis resources.
 
-Last updated: 2026-05-29.
+Last updated: 2026-06-03.
 
 ## Project Page
 
@@ -16,9 +16,9 @@ Public site: <https://bonaparte233.github.io/event_camera_simulation/>
 
 The paper link and BibTeX entry for the review will be added after the preprint or published version is public.
 
-## Physics- and Rule-Based Event-Camera Simulators
+## Physics- and Rule-Based Event-Camera Simulation
 
-### Threshold-Based Simulators
+### Threshold-Based Simulation
 
 - **Pineda Garcia et al.**, *pyDVS: An Extensible Real-Time Dynamic Vision Sensor Emulator*, IEEE SSCI 2016. [[paper](https://doi.org/10.1109/SSCI.2016.7850249)] [[code](https://github.com/chanokin/pyDVS)]
 - **Bi and Andreopoulos**, *PIX2NVS: Parameterized Conversion of Pixel-Domain Video Frames to Neuromorphic Vision Streams*, ICIP 2017. [[paper](https://doi.org/10.1109/ICIP.2017.8296630)] [[code](https://github.com/PIX2NVS/PIX2NVS)]
@@ -30,7 +30,7 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Ziegler et al.**, *Real-time Event Simulation with Frame-Based Cameras*, ICRA 2023. [[paper](https://arxiv.org/abs/2209.04634)] [[project](https://cogsys-tuebingen.github.io/realtime_event_simulator/)] [[code](https://github.com/cogsys-tuebingen/event_simulator)]
 - **Ma et al.**, *I2E: Real-Time Image-to-Event Conversion for High-Performance Spiking Neural Networks*, AAAI 2026. [[paper](https://doi.org/10.1609/aaai.v40i3.37179)] [[code](https://github.com/Ruichen0424/I2E)]
 
-### Sensor-Level Simulators
+### Sensor-Level Simulation
 
 - **Stoffregen et al.**, *Reducing the Sim-to-Real Gap for Event Cameras*, ECCV 2020. [[paper](https://doi.org/10.1007/978-3-030-58583-9_32)] [[project](https://timostoff.github.io/20ecnn)] [[code](https://github.com/TimoStoff/event_cnn_minimal)]
 - **Joubert et al.**, *Event Camera Simulator Improvements via Characterized Parameters*, Frontiers in Neuroscience 2021. [[paper](https://doi.org/10.3389/fnins.2021.702765)]
@@ -43,9 +43,11 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 - **Lu et al.**, *Hybrid Event Frame Sensors: Modeling, Calibration, and Simulation*, arXiv 2025. [[paper](https://arxiv.org/abs/2511.18037)] [[project](https://yunfanlu.github.io/HESIM/)]
 - **Lou et al.**, *V2V: Scaling Event-Based Vision through Efficient Video-to-Voxel Simulation*, NeurIPS 2025. [[paper](https://arxiv.org/abs/2505.16797)] [[project](https://neurips.cc/virtual/2025/poster/118917)] [[code](https://github.com/HYLZ-2019/V2V)]
 
-### Scene-Level Simulators
+### Scene-Level Simulation
 
 - **Kaiser et al.**, *Towards a Framework for End-to-End Control of a Simulated Vehicle with Spiking Neural Networks*, SIMPAR 2016. [[paper](https://doi.org/10.1109/SIMPAR.2016.7862386)]
+- **Li et al.**, *InteriorNet: Mega-scale Multi-sensor Photo-realistic Indoor Scenes Dataset*, BMVC 2018. [[project](https://interiornet.org/)] [[paper](https://interiornet.org/items/interiornet_paper.pdf)]
+- **Rizzo, Schuman, and Plank**, *Event-Based Camera Simulation Wrapper for Arcade Learning Environment*, ICONS 2022. [[paper](https://doi.org/10.1145/3546790.3546817)]
 - **Palinauskas et al.**, *Generating Event-Based Datasets for Robotic Applications using MuJoCo-ESIM*, ICONS 2023. [[paper](https://doi.org/10.1145/3589737.3605984)] [[code](https://github.com/fortissNC/Mujoco-ESIM)]
 - **Tsuji et al.**, *Event-Based Camera Simulation Using Monte Carlo Path Tracing with Adaptive Denoising*, ICIP 2023. [[paper](https://doi.org/10.1109/ICIP49359.2023.10222771)] [[code](https://github.com/0V/ESIM-AD)]
 - **Li et al.**, *BlinkFlow: A Dataset to Push the Limits of Event-based Optical Flow Estimation*, IROS 2023. [[paper](https://arxiv.org/abs/2303.07716)] [[project](https://zju3dv.github.io/blinkflow/)] [[code](https://github.com/zju3dv/blink_sim)]
@@ -92,7 +94,7 @@ The paper link and BibTeX entry for the review will be added after the preprint 
 
 ## Contributing
 
-Contributions are welcome through issues or pull requests. Please include the authors, paper title, venue/year, paper link, official project or code link when available, and a short note explaining how the link was verified.
+Contributions are welcome through issues or pull requests. Please include the authors, paper title, venue/year, paper link, official project or code link when available.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format and category labels.
 

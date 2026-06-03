@@ -18,7 +18,7 @@ README_PATH = ROOT / "README.md"
 INDEX_PATH = ROOT / "index.html"
 
 CATEGORY_LABELS = {
-    "Physics- and Rule-Based Event-Camera Simulators": "Physics- & rule-based",
+    "Physics- and Rule-Based Event-Camera Simulation": "Physics- & rule-based",
     "Learning-Based Event Generation": "Learning-based",
     "Evaluation and Sim-to-Real Analysis": "Evaluation",
 }
@@ -148,7 +148,7 @@ def render_stats(entries: list[CatalogEntry]) -> str:
     counts = Counter(entry.category for entry in entries)
     items = [
         (
-            counts["Physics- and Rule-Based Event-Camera Simulators"],
+            counts["Physics- and Rule-Based Event-Camera Simulation"],
             "physics- and rule-based resources",
         ),
         (counts["Learning-Based Event Generation"], "learning-based resources"),
@@ -184,7 +184,7 @@ def entry_metadata(entry: CatalogEntry) -> str:
 
 def category_class(category: str) -> str:
     classes = {
-        "Physics- and Rule-Based Event-Camera Simulators": "category-physics",
+        "Physics- and Rule-Based Event-Camera Simulation": "category-physics",
         "Learning-Based Event Generation": "category-learning",
         "Evaluation and Sim-to-Real Analysis": "category-evaluation",
     }

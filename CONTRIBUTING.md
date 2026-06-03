@@ -46,13 +46,13 @@ The GitHub workflow checks pull requests and synchronizes generated page blocks 
 
 Choose one category path from the hierarchy below. The categories follow the review's mechanism-based framing: methods are grouped by how events are generated, not by the downstream task they support.
 
-- `Physics- and Rule-Based Event-Camera Simulators`
+- `Physics- and Rule-Based Event-Camera Simulation`
 
   Event generation is governed by an explicit sensing or rendering mechanism, so the assumptions behind the generated events remain inspectable.
 
-  - `Threshold-Based Simulators`: the event trigger rule is the core model.
-  - `Sensor-Level Simulators`: the sensor process around the trigger is the core model.
-  - `Scene-Level Simulators`: the scene or world that drives the event stream is the core model.
+  - `Threshold-Based Simulation`: the event trigger rule is the core model.
+  - `Sensor-Level Simulation`: the sensor process around the trigger is the core model.
+  - `Scene-Level Simulation`: the scene or world that drives the event stream is the core model.
   - `Differentiable / Trainable Extensions`: an explicit simulator core is kept, but made differentiable, trainable, calibratable, or optimization-ready.
 
 - `Learning-Based Event Generation`
